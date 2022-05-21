@@ -6,12 +6,12 @@ This Full-Stack Application gets a User map-based findings for trails and fun
 
 ## Technologies Used
 
-*HTML
-*CSS
-*BootStrap
-*Javascript
-*React
-*Mongoose
-*MongoDB
+###HTML
+###CSS
+###BootStrap
+###Javascript
+###React
+###Mongoose
+###MongoDB
 
 
