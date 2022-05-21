@@ -1,10 +1,11 @@
 import React from 'react'
+import './header.css'
 
 const Header = () => {
   return (
     < >
-    <h1 className='header'>Trail Blazers</h1>
-    <h3>Catchy slogan of some sort if we had one...</h3>
+    <h1 id='header'>Trail Blazers</h1>
+    <h3 id='sub'>Find your next Destination. . .</h3>
     </ >
   )
 }
