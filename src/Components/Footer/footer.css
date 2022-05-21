@@ -1,0 +1,11 @@
+.footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    /* border-style: solid; */
+   
+}
+
+a:hover{
+    color: lavender; 
+}
