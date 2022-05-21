@@ -9,8 +9,8 @@ export const Index = () => {
   console.log(parks)
 
   const key = "EL1Bl0NrfZIjxhIIUVPEsrnWNz5o0cWaaKhvyWa7"
-
-  const url = `https://developer.nps.gov/api/v1/parks?limit=10&api_key=${key}`
+  const searchInput= "starved rock"
+  const url = `https://developer.nps.gov/api/v1/parks?q=${searchInput}&limit=10&stateCode=me&api_key=${key}`
 
   useEffect(() => {
     fetch(url)
@@ -25,9 +25,11 @@ export const Index = () => {
 
   return (
     <>
-    {parks.map(park => 
-    <Card park = {park}/>
+    
+      {parks.map(park => 
+    <Card key={park.id} park = {park}/>
     )}
+    
     {/* {parks.map((park) =>
   <div key={park.id}>
     <h1>{park.fullName}</h1>
