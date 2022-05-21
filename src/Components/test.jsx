@@ -1,1 +1,0 @@
-const david = 90
