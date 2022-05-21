@@ -2,7 +2,10 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div>Header</div>
+    < >
+    <h1 className='header'>Trail Blazers</h1>
+    <h3>Catchy slogan of some sort if we had one...</h3>
+    </ >
   )
 }
 
