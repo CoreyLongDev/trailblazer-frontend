@@ -1,16 +1,21 @@
+// import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header/Header';
-import { Index } from './Components/Content/Index';
-import { SearchBar } from './Components/Searchbar/SearchBar';
-import { Footer } from './Components/Footer/Footer';
+import Footer from './Components/Footer/Footer';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
+
 
 function App() {
   return (
     < >
     <Header />
-    <SearchBar/>
-    <Index/>
-    <Footer/>
+
+
+
+
+    <footer><Footer /></footer>
     </ >
   );
 }
