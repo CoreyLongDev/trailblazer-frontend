@@ -9,7 +9,7 @@ export const Index = () => {
 
   const key = "EL1Bl0NrfZIjxhIIUVPEsrnWNz5o0cWaaKhvyWa7";
 
-  const url = `https://developer.nps.gov/api/v1/parks?limit=10&api_key=${key}`;
+  const url = `https://developer.nps.gov/api/v1/parks?limit=9&api_key=${key}`;
 
   useEffect(() => {
     fetch(url)
