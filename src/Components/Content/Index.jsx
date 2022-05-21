@@ -25,9 +25,11 @@ export const Index = () => {
 
   return (
     <>
-    {parks.map(park => 
-    <Card park = {park}/>
+    
+      {parks.map(park => 
+    <Card key={park.id} park = {park}/>
     )}
+    
     {/* {parks.map((park) =>
   <div key={park.id}>
     <h1>{park.fullName}</h1>
