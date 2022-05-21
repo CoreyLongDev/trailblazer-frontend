@@ -11,17 +11,15 @@ import {
 export default function Card({ park }) {
   return (
     <MDBCard style={{ height: "100%", margin: ".5rem", minWidth: "20vw" }}>
-      <div
-        className="bg-image"
-        style={{ height: "15rem", textAlign: "center" }}
-      >
+      <div style={{ height: "10rem", textAlign: "center" }}>
         <MDBCardImage
-          style={{ height: "15rem" }}
+          style={{ height: "10rem" }}
           src={park.images[0].url}
           fluid
           alt={park.name}
         />
       </div>
+
       {/* <a>
         <div
           className="mask overlay"
@@ -29,10 +27,19 @@ export default function Card({ park }) {
         ></div>
       </a> */}
       <MDBCardBody>
-        <MDBCardTitle>{park.name}</MDBCardTitle>
-        <MDBCardText>{park.description}</MDBCardText>
+        <MDBCardTitle>{park.fullName}</MDBCardTitle>
+        <MDBCardText>
+          <div>
+            {park.addresses[0].city}, {park.addresses[0].stateCode}
+          </div>
+        </MDBCardText>
         <div>
-          <MDBBtn href="#">View</MDBBtn>
+          <MDBBtn
+            style={{ position: "absolute", right: "0", bottom: "0" }}
+            href="#"
+          >
+            View
+          </MDBBtn>
         </div>
       </MDBCardBody>
     </MDBCard>
