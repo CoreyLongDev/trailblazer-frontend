@@ -3,8 +3,6 @@ import {
   MDBCard,
   MDBCardOverlay,
   MDBCardTitle,
-  MDBRow,
-  MDBCol,
   MDBContainer,
   MDBCardImage,
 } from "mdb-react-ui-kit";
@@ -23,7 +21,12 @@ const Welcome = () => {
       >
         <div
           className="mask"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.6)", margin: "0 auto" }}
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
+            margin: "0 auto",
+            top: "50%",
+            transform: "translateY(50%)",
+          }}
         >
           <div className="d-flex justify-content-center align-items-center h-100">
             <div className="text-white">
@@ -41,7 +44,7 @@ const Welcome = () => {
       </div>
       {/* END HERO BANNER*/}
       <MDBContainer
-        className="d-flex flex-row mb-3"
+        className="d-flex flex-md-row  mb-3  "
         style={{ marginTop: ".5rem", justifyContent: "space-evenly" }}
       >
         <MDBCard background="dark" className="text-white w-25">
@@ -52,7 +55,7 @@ const Welcome = () => {
             alt="trails"
           />
           <MDBCardOverlay>
-            <MDBCardTitle>hike.</MDBCardTitle>
+            <MDBCardTitle>hike</MDBCardTitle>
           </MDBCardOverlay>
         </MDBCard>
 
@@ -64,7 +67,7 @@ const Welcome = () => {
             className="h-100"
           />
           <MDBCardOverlay>
-            <MDBCardTitle>see.</MDBCardTitle>
+            <MDBCardTitle>see</MDBCardTitle>
           </MDBCardOverlay>
         </MDBCard>
 
@@ -76,7 +79,7 @@ const Welcome = () => {
             className="h-100"
           />
           <MDBCardOverlay>
-            <MDBCardTitle>soak.</MDBCardTitle>
+            <MDBCardTitle>soak</MDBCardTitle>
           </MDBCardOverlay>
         </MDBCard>
       </MDBContainer>
