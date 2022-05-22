@@ -21,11 +21,13 @@ const Welcome = () => {
           marginTop: ".5rem",
         }}
       >
-        <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
+        <div
+          className="mask"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.6)", margin: "0 auto" }}
+        >
           <div className="d-flex justify-content-center align-items-center h-100">
             <div className="text-white">
               <h1 className="mb-3">Trail Blazers</h1>
-              {/* <h4 className="mb-3">Find your next destination</h4> */}
               <hr
                 style={{
                   borderTop: "3px solid #bbb",
@@ -37,47 +39,46 @@ const Welcome = () => {
           </div>
         </div>
       </div>
-      <MDBContainer style={{ marginTop: ".5rem" }}>
-        <MDBRow>
-          <MDBCol style={{ marginBottom: ".75rem" }} sm="6">
-            <MDBCard background="dark" className="text-white">
-              <MDBCardImage
-                overlay
-                src="https://pixabay.com/get/gdbd09178b8891cf21e26c2317b0cf3a40e5be62548126af185859010e0c983bdb816c3e16c1e148cc2abe8c16b7a2f09_1280.jpg"
-                alt="..."
-              />
-              <MDBCardOverlay>
-                <MDBCardTitle>hike.</MDBCardTitle>
-              </MDBCardOverlay>
-            </MDBCard>
-          </MDBCol>
+      {/* END HERO BANNER*/}
+      <MDBContainer
+        className="d-flex flex-row mb-3"
+        style={{ marginTop: ".5rem", justifyContent: "space-evenly" }}
+      >
+        <MDBCard background="dark" className="text-white w-25">
+          <MDBCardImage
+            overlay
+            src="https://pixabay.com/get/gdbd09178b8891cf21e26c2317b0cf3a40e5be62548126af185859010e0c983bdb816c3e16c1e148cc2abe8c16b7a2f09_1280.jpg"
+            className="h-100"
+            alt="trails"
+          />
+          <MDBCardOverlay>
+            <MDBCardTitle>hike.</MDBCardTitle>
+          </MDBCardOverlay>
+        </MDBCard>
 
-          <MDBCol sm="6">
-            <MDBCard background="dark" className="text-white">
-              <MDBCardImage
-                overlay
-                src="https://pixabay.com/get/g0a1d6935049a2fcf98384885236644cf8b9c04c68038d0302ea3702cc6d82805a59de7d828aa5521aceb92d35eeb844a068a72bd9b8632803a3df0c6db97da51_1280.jpg"
-                alt="..."
-              />
-              <MDBCardOverlay>
-                <MDBCardTitle>see.</MDBCardTitle>
-              </MDBCardOverlay>
-            </MDBCard>
-          </MDBCol>
+        <MDBCard background="dark" className="text-white w-25">
+          <MDBCardImage
+            overlay
+            src="https://pixabay.com/get/g0a1d6935049a2fcf98384885236644cf8b9c04c68038d0302ea3702cc6d82805a59de7d828aa5521aceb92d35eeb844a068a72bd9b8632803a3df0c6db97da51_1280.jpg"
+            alt="national parks"
+            className="h-100"
+          />
+          <MDBCardOverlay>
+            <MDBCardTitle>see.</MDBCardTitle>
+          </MDBCardOverlay>
+        </MDBCard>
 
-          <MDBCol sm="6">
-            <MDBCard background="dark" className="text-white">
-              <MDBCardImage
-                overlay
-                src="https://pixabay.com/get/g321f6de59f077f7d4e6177cad7e4cb1912754dd8f44510aeeb843a1a517f03b0113284540afd286e0bafb06fd4cbbf58_640.jpg"
-                alt="..."
-              />
-              <MDBCardOverlay>
-                <MDBCardTitle>soak.</MDBCardTitle>
-              </MDBCardOverlay>
-            </MDBCard>
-          </MDBCol>
-        </MDBRow>
+        <MDBCard background="dark" className="text-white w-25">
+          <MDBCardImage
+            overlay
+            src="https://pixabay.com/get/g321f6de59f077f7d4e6177cad7e4cb1912754dd8f44510aeeb843a1a517f03b0113284540afd286e0bafb06fd4cbbf58_640.jpg"
+            alt="hot springs"
+            className="h-100"
+          />
+          <MDBCardOverlay>
+            <MDBCardTitle>soak.</MDBCardTitle>
+          </MDBCardOverlay>
+        </MDBCard>
       </MDBContainer>
     </>
   );
