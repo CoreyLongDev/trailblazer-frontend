@@ -1,7 +1,13 @@
 import React from 'react'
 
-export const Nav = () => {
+export const NavBar = () => {
   return (
-    <div>Nav</div>
+    <div>
+      <ul className='navBar'>
+        <li>Home</li>
+        <li>???</li>
+        <li>About Us</li>
+      </ul>
+    </div>
   )
 }
