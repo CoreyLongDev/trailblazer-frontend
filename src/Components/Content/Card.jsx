@@ -5,7 +5,6 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBCardImage,
-  MDBBtn,
 } from "mdb-react-ui-kit";
 
 export default function Card({ park }) {
@@ -19,13 +18,6 @@ export default function Card({ park }) {
           alt={park.name}
         />
       </div>
-
-      {/* <a>
-        <div
-          className="mask overlay"
-          style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-        ></div>
-      </a> */}
       <MDBCardBody>
         <MDBCardTitle>{park.fullName}</MDBCardTitle>
         <MDBCardText>
@@ -34,12 +26,13 @@ export default function Card({ park }) {
           </div>
         </MDBCardText>
         <div>
-          <MDBBtn
+          <button
             style={{ position: "absolute", right: "0", bottom: "0" }}
             href="#"
+            className="btn btn-primary"
           >
             View
-          </MDBBtn>
+          </button>
         </div>
       </MDBCardBody>
     </MDBCard>
