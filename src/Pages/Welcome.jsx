@@ -10,6 +10,7 @@ import {
 const Welcome = () => {
   return (
     <>
+      {/* START HERO BANNER */}
       <div
         className="p-5 text-center bg-image"
         style={{
@@ -42,11 +43,15 @@ const Welcome = () => {
           </div>
         </div>
       </div>
+
       {/* END HERO BANNER*/}
+      {/* START NPI CARDS */}
+
       <MDBContainer
         className="d-flex flex-md-row  mb-3  "
         style={{ marginTop: ".5rem", justifyContent: "space-evenly" }}
       >
+        {/* CARD 1 */}
         <MDBCard background="dark" className="text-white w-25">
           <MDBCardImage
             overlay
@@ -58,7 +63,9 @@ const Welcome = () => {
             <MDBCardTitle>hike</MDBCardTitle>
           </MDBCardOverlay>
         </MDBCard>
+        {/* END CARD 1 */}
 
+        {/* CARD 2 */}
         <MDBCard background="dark" className="text-white w-25">
           <MDBCardImage
             overlay
@@ -70,7 +77,9 @@ const Welcome = () => {
             <MDBCardTitle>see</MDBCardTitle>
           </MDBCardOverlay>
         </MDBCard>
+        {/* END CARD 2 */}
 
+        {/* CARD 3 */}
         <MDBCard background="dark" className="text-white w-25">
           <MDBCardImage
             overlay
@@ -82,6 +91,7 @@ const Welcome = () => {
             <MDBCardTitle>soak</MDBCardTitle>
           </MDBCardOverlay>
         </MDBCard>
+        {/* END CARD 3 */}
       </MDBContainer>
     </>
   );
