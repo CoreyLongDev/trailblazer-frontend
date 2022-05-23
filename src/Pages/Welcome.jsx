@@ -93,6 +93,7 @@ const Welcome = () => {
         </MDBCard>
         {/* END CARD 3 */}
       </MDBContainer>
+      
     </>
   );
 };
