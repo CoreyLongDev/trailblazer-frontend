@@ -3,14 +3,35 @@ import Header from "./Components/Header/Header";
 import NavBar from "./Components/Navbar/NavBar";
 import { Index } from "./Components/Content/Index";
 import { SearchBar } from "./Components/Searchbar/SearchBar";
+import { Routes, Route } from "react-router-dom";
+import Welcome from "./Pages/Welcome";
+import { About } from "./Pages/About";
 
 function App() {
   return (
     <>
-      <Header />
+      <header>
+        <Header />
       <NavBar />
       <SearchBar />
-      <Index />
+      </header>
+      
+      
+
+      <Routes>
+            <Route 
+            path='/' 
+            element={<Welcome/>} 
+            />
+            <Route 
+            path='/parks' 
+            element={<Index/>} 
+            />
+            <Route 
+            path='/about' 
+            element={<About/>} 
+            />
+        </Routes>
     </>
   );
 }
