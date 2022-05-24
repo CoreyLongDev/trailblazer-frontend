@@ -6,6 +6,7 @@ import { SearchBar } from "./Components/Searchbar/SearchBar";
 import { Routes, Route } from "react-router-dom";
 import Welcome from "./Pages/Welcome";
 import { About } from "./Pages/About";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <NavBar />
       <SearchBar />
       </header>
-      
+      <Footer />
       
 
       <Routes>
