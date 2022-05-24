@@ -46,7 +46,7 @@ export const About = () => {
     <h1>Meet the Creators</h1>
     {peeps.map((peep,index)=> (
       <div key={index}>
-        <h1>{peep.name}</h1>
+        <h3>{peep.name}</h3>
         <img src={peep.img} alt={peep.name} />
         <p>{peep.about}</p>
       </div>
