@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Smooch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Macondo&display=swap");
+
+#header {
+  font-family: "Smooch", cursive;
+  color: maroon;
+  margin-bottom: -10px;
+}
+
+#sub {
+  font-size: small;
+  font-family: "Macondo", cursive;
+  color: #459856;
+}

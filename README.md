@@ -1,8 +1,12 @@
 # Project 3
+
 ## Corey Long, Martin Wilson, Myles Turner, Jacob Vernau, David Dobrose
 
 ## Information
-This Full-Stack Application gets a User map-based findings for trails and fun
+
+Full-Stack Application with Custom API, REST & CRUD functionality.
+
+This Progressive application focuses on national parks and trails for users to connect via ratings, reviews and other environmental statistics.
 
 ## Technologies Used
 
@@ -13,6 +17,4 @@ This Full-Stack Application gets a User map-based findings for trails and fun
 ### React
 ### Mongoose
 ### MongoDB
-### Express
-
-
+### Cors

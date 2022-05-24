@@ -1,9 +1,40 @@
-import React from 'react'
+import React from "react";
+import {
+  MDBCard,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardImage,
+} from "mdb-react-ui-kit";
 
-export const Card = () => {
+export default function Card({ park }) {
   return (
-    <div>Card</div>
-  )
+    <MDBCard style={{ height: "100%", margin: ".5rem", minWidth: "20vw" }}>
+      <div style={{ height: "10rem", textAlign: "center" }}>
+        <MDBCardImage
+          style={{ height: "10rem" }}
+          src={park.images[0].url}
+          fluid
+          alt={park.name}
+        />
+      </div>
+      <MDBCardBody>
+        <MDBCardTitle>{park.fullName}</MDBCardTitle>
+        <MDBCardText>
+          <div>
+            {park.addresses[0].city}, {park.addresses[0].stateCode}
+          </div>
+        </MDBCardText>
+        <div>
+          <button
+            style={{ position: "absolute", right: "0", bottom: "0" }}
+            href="#"
+            className="btn btn-primary"
+          >
+            View
+          </button>
+        </div>
+      </MDBCardBody>
+    </MDBCard>
+  );
 }
-
-
