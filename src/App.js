@@ -16,7 +16,7 @@ function App() {
       <NavBar />
       <SearchBar />
       </header>
-      <Footer />
+      
       
 
       <Routes>
@@ -33,6 +33,10 @@ function App() {
             element={<About/>} 
             />
         </Routes>
+
+        <footer className="footer-app">
+          <Footer />
+
     </>
   );
 }
