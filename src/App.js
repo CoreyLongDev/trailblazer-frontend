@@ -7,6 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import { Routes, Route } from "react-router-dom";
 import Welcome from "./Pages/Welcome";
 import { About } from "./Pages/About";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -18,11 +19,7 @@ function App() {
       <Index />
       
       </header>
-      
-      <div className="app-footer">
-        <Footer />
-      </div>
-      
+      <Footer />
       
 
       <Routes>
