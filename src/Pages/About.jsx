@@ -1,4 +1,5 @@
 import React from 'react'
+import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardGroup } from 'mdb-react-ui-kit';
 
 export const About = () => {
 
@@ -44,13 +45,22 @@ export const About = () => {
     <p>Outdoors is for Anyone, Anytime.</p>
 
     <h1>Meet the Creators</h1>
+    <MDBCardGroup>
     {peeps.map((peep,index)=> (
-      <div key={index}>
-        <h3>{peep.name}</h3>
-        <img src={peep.img} alt={peep.name} />
-        <p>{peep.about}</p>
-      </div>
+      <MDBCard key={index}>
+        <MDBCardImage src={peep.img} alt='...' position='top' />
+        <MDBCardBody>
+          <MDBCardTitle>{peep.name}</MDBCardTitle>
+          <MDBCardText>
+            {peep.about}
+          </MDBCardText>
+          <MDBCardText>
+            <small className='text-muted'></small>
+          </MDBCardText>
+        </MDBCardBody>
+      </MDBCard>
     ))}
+   </MDBCardGroup>
 
     
 
