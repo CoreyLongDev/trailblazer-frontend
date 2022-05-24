@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   MDBCard,
   MDBCardOverlay,
@@ -53,47 +54,54 @@ const Welcome = () => {
       >
         {/* CARD 1 */}
         <MDBCard background="dark" className="text-white w-25">
-          <MDBCardImage
-            overlay
-            src="https://pixabay.com/get/gdbd09178b8891cf21e26c2317b0cf3a40e5be62548126af185859010e0c983bdb816c3e16c1e148cc2abe8c16b7a2f09_1280.jpg"
-            className="h-100"
-            alt="trails"
-          />
-          <MDBCardOverlay>
-            <MDBCardTitle>hike</MDBCardTitle>
-          </MDBCardOverlay>
+          <Link to={"/trails"} style={{ color: "white" }}>
+            <MDBCardImage
+              overlay
+              src="https://cdn.pixabay.com/photo/2016/11/22/19/25/man-1850181_960_720.jpg"
+              className="h-100"
+              alt="trails"
+            />
+            <MDBCardOverlay>
+              <MDBCardTitle>hike</MDBCardTitle>
+            </MDBCardOverlay>
+          </Link>
         </MDBCard>
         {/* END CARD 1 */}
 
         {/* CARD 2 */}
+
         <MDBCard background="dark" className="text-white w-25">
-          <MDBCardImage
-            overlay
-            src="https://pixabay.com/get/g0a1d6935049a2fcf98384885236644cf8b9c04c68038d0302ea3702cc6d82805a59de7d828aa5521aceb92d35eeb844a068a72bd9b8632803a3df0c6db97da51_1280.jpg"
-            alt="national parks"
-            className="h-100"
-          />
-          <MDBCardOverlay>
-            <MDBCardTitle>see</MDBCardTitle>
-          </MDBCardOverlay>
+          <Link to={"/parks"} style={{ color: "white" }}>
+            <MDBCardImage
+              overlay
+              src="https://cdn.pixabay.com/photo/2016/08/12/20/14/river-1589616_960_720.jpg"
+              alt="national parks"
+              className="h-100"
+            />
+            <MDBCardOverlay>
+              <MDBCardTitle>see</MDBCardTitle>
+            </MDBCardOverlay>
+          </Link>
         </MDBCard>
+
         {/* END CARD 2 */}
 
         {/* CARD 3 */}
         <MDBCard background="dark" className="text-white w-25">
-          <MDBCardImage
-            overlay
-            src="https://pixabay.com/get/g321f6de59f077f7d4e6177cad7e4cb1912754dd8f44510aeeb843a1a517f03b0113284540afd286e0bafb06fd4cbbf58_640.jpg"
-            alt="hot springs"
-            className="h-100"
-          />
-          <MDBCardOverlay>
-            <MDBCardTitle>soak</MDBCardTitle>
-          </MDBCardOverlay>
+          <Link to={"/hotsprings"} style={{ color: "white" }}>
+            <MDBCardImage
+              overlay
+              src="https://cdn.pixabay.com/photo/2016/11/21/17/39/hot-spring-1846721_960_720.jpg"
+              alt="hot springs"
+              className="h-100"
+            />
+            <MDBCardOverlay>
+              <MDBCardTitle>soak</MDBCardTitle>
+            </MDBCardOverlay>
+          </Link>
         </MDBCard>
         {/* END CARD 3 */}
       </MDBContainer>
-      
     </>
   );
 };
