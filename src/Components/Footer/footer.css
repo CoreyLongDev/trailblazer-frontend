@@ -1,11 +1,11 @@
-/* .footer{
-    position: relative;
+.footer{
+    position:relative;
     bottom:0;
     left:0;
     
     border-style: solid;
    
-}  */
+} 
 
 a:hover{
     color: lavender; 

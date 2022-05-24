@@ -19,15 +19,6 @@ function App() {
       <Index />
       
       </header>
-     
-      
-      
-      
-      
-      
-      
-      
-      
       
       
 
@@ -46,11 +37,9 @@ function App() {
             />
         </Routes>
 
-
         <footer className="footer-app">
           <Footer />
-      
-      </footer>
+          </footer>
     </>
   );
 }
