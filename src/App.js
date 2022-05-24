@@ -19,7 +19,16 @@ function App() {
       <Index />
       
       </header>
-      <Footer />
+     
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
 
       <Routes>
@@ -36,6 +45,12 @@ function App() {
             element={<About/>} 
             />
         </Routes>
+
+
+        <footer className="footer-app">
+          <Footer />
+      
+      </footer>
     </>
   );
 }
