@@ -39,7 +39,7 @@ function App() {
 
         <footer className="footer-app">
           <Footer />
-          </footer>
+        </footer>
     </>
   );
 }
