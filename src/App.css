@@ -42,12 +42,9 @@ body {
 
 
 .footer-app{
-  border-style: solid;
+  
   bottom: 0%;
   left: 0%;
   position: relative;
-<<<<<<< HEAD
+  padding-top: 50px;
 }
-=======
-}
->>>>>>> e1816b9e373ff243a22248cd7b2239af4d3bea0e
