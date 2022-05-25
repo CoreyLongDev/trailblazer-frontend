@@ -6,7 +6,8 @@ import { SearchBar } from "./Components/Searchbar/SearchBar";
 import { Routes, Route } from "react-router-dom";
 import Welcome from "./Pages/Welcome";
 import { About } from "./Pages/About";
-import Footer from "./Components/Footer/Footer";
+import MapWrapper from "./Components/map/MapWrapper";
+import  Footer  from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -32,11 +33,13 @@ function App() {
             path='/about' 
             element={<About/>} 
             />
-        </Routes>
+            <Route
+            path='/map'
+            element={<MapWrapper/>}
+            />
 
-        <footer className="footer-app">
-          <Footer />
-        </footer>
+        </Routes>
+        <Footer/>
     </>
   );
 }
