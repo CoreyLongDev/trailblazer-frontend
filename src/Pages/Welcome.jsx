@@ -62,7 +62,7 @@ const Welcome = () => {
               alt="trails"
             />
             <MDBCardOverlay>
-              <MDBCardTitle>hike</MDBCardTitle>
+              <MDBCardTitle>Hike</MDBCardTitle>
             </MDBCardOverlay>
           </Link>
         </MDBCard>
@@ -79,7 +79,7 @@ const Welcome = () => {
               className="h-100"
             />
             <MDBCardOverlay>
-              <MDBCardTitle>see</MDBCardTitle>
+              <MDBCardTitle>See</MDBCardTitle>
             </MDBCardOverlay>
           </Link>
         </MDBCard>
@@ -96,7 +96,7 @@ const Welcome = () => {
               className="h-100"
             />
             <MDBCardOverlay>
-              <MDBCardTitle>soak</MDBCardTitle>
+              <MDBCardTitle>Soak</MDBCardTitle>
             </MDBCardOverlay>
           </Link>
         </MDBCard>

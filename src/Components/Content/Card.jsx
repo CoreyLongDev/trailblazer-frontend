@@ -6,6 +6,8 @@ import {
   MDBCardText,
   MDBCardImage,
 } from "mdb-react-ui-kit";
+import { useLocation, Link, Route, Routes } from "react-router-dom";
+import View from "../View/View";
 
 export default function Card({ park }) {
   return (
@@ -18,6 +20,7 @@ export default function Card({ park }) {
           alt={park.name}
         />
       </div>
+      
       <MDBCardBody>
         <MDBCardTitle>{park.fullName}</MDBCardTitle>
         <MDBCardText>
@@ -26,15 +29,23 @@ export default function Card({ park }) {
           </div>
         </MDBCardText>
         <div>
-          <button
+            <Link to= "/:id/view" state={{from: '/'}}>
+                
+        <button
             style={{ position: "absolute", right: "0", bottom: "0" }}
             href="#"
             className="btn btn-primary"
+
           >
+          
             View
           </button>
+          </Link>
         </div>
+        
       </MDBCardBody>
+      
     </MDBCard>
+    
   );
 }

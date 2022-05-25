@@ -9,6 +9,8 @@ import Welcome from "./Pages/Welcome";
 import { About } from "./Pages/About";
 import MapWrapper from "./Components/map/MapWrapper";
 import  Footer  from './Components/Footer/Footer';
+import View from "./Components/View/View";
+
 
 function App() {
   return (
@@ -40,8 +42,12 @@ function App() {
             path='/map'
             element={<MapWrapper/>}
             />
-
+            <Route path="/:id/view"
+                    element={<View/>}
+                    />
         </Routes>
+
+       
         <Footer/>
     </>
   );
