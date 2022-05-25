@@ -8,7 +8,6 @@ import { Routes, Route } from "react-router-dom";
 import Welcome from "./Pages/Welcome";
 import { About } from "./Pages/About";
 import MapWrapper from "./Components/map/MapWrapper";
-import  Footer  from './Components/Footer/Footer';
 import View from "./Components/View/View";
 
 
