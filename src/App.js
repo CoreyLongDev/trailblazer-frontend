@@ -3,6 +3,7 @@ import Header from "./Components/Header/Header";
 import NavBar from "./Components/Navbar/NavBar";
 import { Index } from "./Components/Content/Index";
 import { SearchBar } from "./Components/Searchbar/SearchBar";
+import Footer from "./Components/Footer/Footer";
 import { Routes, Route } from "react-router-dom";
 import Welcome from "./Pages/Welcome";
 import { About } from "./Pages/About";
@@ -16,6 +17,8 @@ function App() {
         <Header />
       <NavBar />
       <SearchBar />
+      <Index />
+      
       </header>
       
       
