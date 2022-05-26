@@ -12,13 +12,13 @@ function View() {
           .then((res) => res.json())
           .then((res) => {
             console.log(res);
-            setPark(res.data);
+            setPark(res.data[0]);
           })
           .catch(console.error);
       }, []);
   return (
     <div>
-    {park[0].fullName}
+    {park.fullName}
 
     </div>
 
