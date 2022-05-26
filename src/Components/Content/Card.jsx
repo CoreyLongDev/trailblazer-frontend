@@ -8,6 +8,7 @@ import {
 } from "mdb-react-ui-kit";
 import { useLocation, Link, Route, Routes } from "react-router-dom";
 import View from "../View/View";
+import "../Sidebar/Sidebar.css";
 
 export default function Card({ park }) {
   return (
@@ -15,10 +16,11 @@ export default function Card({ park }) {
       style={{
         height: "100%",
         margin: ".5rem",
-        minWidth: "35vw",
         display: "flex",
         flexDirection: "row",
+        width: "144%",
       }}
+      className="card"
     >
       <div
         style={{
@@ -36,7 +38,10 @@ export default function Card({ park }) {
         />
       </div>
 
-      <MDBCardBody style={{ textAlign: "right", paddingRight: "6px" }}>
+      <MDBCardBody
+        style={{ textAlign: "right", paddingRight: "6px" }}
+        className="card-body"
+      >
         <MDBCardTitle className="mb-0">{park.fullName}</MDBCardTitle>
         <MDBCardText>
           <div>

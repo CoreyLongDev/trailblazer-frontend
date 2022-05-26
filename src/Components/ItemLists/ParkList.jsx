@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Card from "../Content/Card";
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 
-export const Index = () => {
+const ParkList = () => {
   const [parks, setParks] = useState([]);
 
   console.log(parks);
@@ -40,3 +40,5 @@ export const Index = () => {
     </>
   );
 };
+
+export default ParkList;

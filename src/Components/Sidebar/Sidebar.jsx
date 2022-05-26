@@ -1,20 +1,19 @@
 import React from "react";
 import "./Sidebar.css";
-import { Index } from "../ItemLists/ParkList";
+import ParkList from "../ItemLists/ParkList";
 
 function Sidebar() {
   return (
     <>
       <div className="sidebar">
-        <h2>Your Parks</h2>
+        <h2 className="sidebar-header">National Parks</h2>
         <hr
           style={{
-            borderTop: "3px solid #bbb",
-            width: "80%",
+            borderTop: "1.5px solid black",
+            width: "90%",
           }}
-          class="solid"
         />
-        <Index />
+        <ParkList />
       </div>
     </>
   );
