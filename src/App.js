@@ -15,12 +15,12 @@ import Trails from "./Pages/Trails";
 function App() {
   return (
     <>
-    <div style={{ display: "flex" }}><header>
+    <header>
         <Header />
         <NavBar />
         <SearchBar />
-        <div><MapContainer/></div>
-      </header></div>
+        {/* <div><MapContainer/></div> */}
+      </header>
       
 
       <Routes>

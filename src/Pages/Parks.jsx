@@ -26,10 +26,12 @@ function Parks() {
     <>
       <div style={{ display: "flex" }}>
         <Sidebar />
-        <div><MapContainer locations = {locations} parks = {parks}/></div>
+        <MapContainer/>
+        {/* <div><MapContainer/></div> */}
       </div>
     </>
   );
 }
+// locations = {locations} parks = {parks}
 
 export default Parks;
