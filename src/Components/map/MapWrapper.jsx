@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { GoogleMap, useLoadScript, Marker, LoadScript} from '@react-google-maps/api'
+import { GoogleMap, Marker, LoadScript} from '@react-google-maps/api'
 import './map.css'
 
 const containerStyle = {
@@ -12,24 +12,19 @@ const center = {
     lng: -80
 }
 
+const markerIcon = 'tomato.jpg'
+
+
 const MapWrapper = () => {
-    // const [data, setData] = useState()
+    const [data, setData] = useState()
 
-    // useEffect(() => {
-    //     fetch("https://fathomless-eyrie-16229.herokuapp.com/trails")
-    //     .then(res => res.json())
-    //     .then(data => setData(data))
-    //     .catch(console.error)
-    // }, [])
+    useEffect(() => {
+        fetch("https://fathomless-eyrie-16229.herokuapp.com/trails")
+        .then(res => res.json())
+        .then(data => setData(data))
+        .catch(console.error)
+    }, [])
 
-    // const { isLoaded } = useLoadScript({
-    //     googleMapsApiKey: "AIzaSyATCjfZiX2detwHsNbc_nOpyh3d3TKi0To"
-    // })
-
-    // if(!isLoaded) return<div>Loading</div>
-    // return(
-    //     <Map/>
-    // )
 
     return(
         <LoadScript
@@ -40,7 +35,10 @@ const MapWrapper = () => {
                 center={center}
                 zoom={10}
             >
-
+                <Marker 
+                position={{lat: 44.00947, lng: -80.00190}}
+                />
+            
             </GoogleMap>
         </LoadScript>
     )
