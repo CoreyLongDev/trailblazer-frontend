@@ -1,7 +1,6 @@
 import "./App.css";
 import Header from "./Components/Header/Header";
 import NavBar from "./Components/Navbar/NavBar";
-import { Index } from "./Pages/Index";
 import { SearchBar } from "./Components/Searchbar/SearchBar";
 import Footer from "./Components/Footer/Footer";
 import { Routes, Route } from "react-router-dom";
@@ -10,6 +9,8 @@ import { About } from "./Pages/About";
 import MapWrapper from "./Components/map/MapWrapper";
 import View from "./Components/View/View";
 import Sidebar from "./Components/Sidebar/Sidebar";
+import Parks from "./Pages/Parks";
+import Trails from "./Pages/Trails";
 
 function App() {
   return (
@@ -26,8 +27,15 @@ function App() {
           path="/parks"
           element={
             <>
-              <Index />
-              <Sidebar />
+              <Parks />
+            </>
+          }
+        />
+        <Route
+          path="/trails"
+          element={
+            <>
+              <Trails />
             </>
           }
         />
