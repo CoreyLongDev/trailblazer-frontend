@@ -49,7 +49,7 @@ export default function Card({ park }) {
           </div>
         </MDBCardText>
         <div>
-          <Link to="/:id/view" state={{ from: "/" }}>
+        <Link to= {`/${park.id}/view` }state={park}>
             <button
               style={{ position: "absolute", right: "0", bottom: "0" }}
               href="#"
