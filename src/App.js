@@ -6,7 +6,7 @@ import Footer from "./Components/Footer/Footer";
 import { Routes, Route } from "react-router-dom";
 import Welcome from "./Pages/Welcome";
 import { About } from "./Pages/About";
-import MapWrapper from "./Components/map/MapWrapper";
+import MapContainer from "./Components/map/MapWrapper";
 import View from "./Components/View/View";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Parks from "./Pages/Parks";
@@ -15,11 +15,13 @@ import Trails from "./Pages/Trails";
 function App() {
   return (
     <>
-      <header>
+    <div style={{ display: "flex" }}><header>
         <Header />
         <NavBar />
         <SearchBar />
-      </header>
+        <div><MapContainer/></div>
+      </header></div>
+      
 
       <Routes>
         <Route path="/" element={<Welcome />} />
@@ -40,7 +42,7 @@ function App() {
           }
         />
         <Route path="/about" element={<About />} />
-        <Route path="/map" element={<MapWrapper />} />
+        <Route path="/map" element={<MapContainer />} />
         <Route path="/:id/view" element={<View />} />
       </Routes>
 
