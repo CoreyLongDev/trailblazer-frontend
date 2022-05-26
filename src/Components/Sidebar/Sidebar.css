@@ -1,0 +1,6 @@
+/* Page works fine on small and med screen sizes. When screen is OVER 1006px Map should render  */
+
+.sidebar {
+  background-color: green;
+  width: 40vw;
+}

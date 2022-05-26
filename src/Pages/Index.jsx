@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Card from "./Card";
+import Card from "../Components/Content/Card";
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 
 export const Index = () => {
@@ -35,12 +35,6 @@ export const Index = () => {
               <Card park={park} />
             </MDBCol>
           ))}
-          {/* {parks.map((park) =>
-  <div key={park.id}>
-    <h1>{park.fullName}</h1>
-    <h2>{park.latLong}</h2>
-  </div>  
-  )} */}
         </MDBRow>
       </MDBContainer>
     </>
