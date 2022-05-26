@@ -28,6 +28,7 @@ export default function Card({ park }) {
             {park.addresses[0].city}, {park.addresses[0].stateCode}
           </div>
         </MDBCardText>
+        
         <div>
             <Link to= {`/${park.id}/view` }state={park}>
                 
