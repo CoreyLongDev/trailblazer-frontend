@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Card from "../Components/Content/Card";
+import Card from "../Content/Card";
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 
 export const Index = () => {

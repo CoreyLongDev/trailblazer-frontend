@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
-import { Index } from "../../Pages/Index";
+import { Index } from "../ItemLists/ParkList";
 
 function Sidebar() {
   return (
