@@ -22,6 +22,9 @@ const NavBar = () => {
           <MDBBreadcrumbItem active aria-current='page'>
           <Link className= "link" to={"/about"}><a href="/about">About Us</a></Link>
           </MDBBreadcrumbItem>
+          <MDBBreadcrumbItem>
+            <Link className="link" to={'/map'}><a href="/map">Map</a></Link>
+          </MDBBreadcrumbItem>
         </MDBBreadcrumb>
       </nav>
     </MDBContainer>
