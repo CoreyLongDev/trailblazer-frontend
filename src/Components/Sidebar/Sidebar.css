@@ -1,6 +1,27 @@
 /* Page works fine on small and med screen sizes. When screen is OVER 1006px Map should render  */
 
 .sidebar {
-  background-color: green;
-  width: 40vw;
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.sidebar-header {
+  text-align: center;
+  margin: 10px;
+}
+
+@media screen and (min-width: 1280px) {
+  .sidebar {
+    max-width: 400px;
+    max-height: 75vh;
+    overflow-y: scroll;
+    flex: 0 0 400px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .sidebar {
+    max-width: 300px;
+    flex: 0 0 300px;
+  }
 }
