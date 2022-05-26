@@ -1,5 +1,5 @@
-import React from 'react'
-import { useEffect, useParams, useState } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import {  useParams } from 'react-router-dom';
 
 
 function View() {
@@ -18,8 +18,7 @@ function View() {
       }, []);
   return (
     <div>
-    <h1>TESTING</h1>
-    <h2>{park.fullName}</h2>
+    {park[0].fullName}
 
     </div>
 
