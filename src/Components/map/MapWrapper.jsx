@@ -39,6 +39,7 @@
 import React from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
+
 const MapContainer = ({locations, parks}) => {
 
     const mapMarkers = locations
@@ -69,6 +70,7 @@ const MapContainer = ({locations, parks}) => {
               return (
                 <Marker position ={item}
                 />
+                
               )
             })}
           </GoogleMap>
