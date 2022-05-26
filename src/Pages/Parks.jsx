@@ -26,7 +26,7 @@ function Parks() {
     <>
       <div style={{ display: "flex" }}>
         <Sidebar />
-        <MapContainer/>
+        <MapContainer parks = {parks}/>
         {/* <div><MapContainer/></div> */}
       </div>
     </>
