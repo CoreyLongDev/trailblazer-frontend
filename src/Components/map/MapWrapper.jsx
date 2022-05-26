@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { GoogleMap, useLoadScript} from '@react-google-maps/api'
-import './Map.css'
+import './map.css'
 
 
 const MapWrapper = () => {
