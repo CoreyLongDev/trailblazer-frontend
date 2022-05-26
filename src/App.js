@@ -18,7 +18,6 @@ function App() {
         <Header />
         <NavBar />
         <SearchBar />
-        <Index />
       </header>
 
       <Routes>
