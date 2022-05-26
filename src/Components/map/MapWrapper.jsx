@@ -37,13 +37,17 @@
 // export default MapWrapper
 
 import React from 'react';
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const MapContainer = ({locations, parks}) => {
 
     const mapMarkers = locations
-    const parkdata = {parks}
+    console.log(parks)
+    const latLongs = parks.map(park => {
+      return {lat : Number(park.latitude), lng: Number(park.longitude)}
+    })
   
+    console.log(latLongs)
   const mapStyles = {        
     height: "100vh",
     width: "100%"};
@@ -51,7 +55,7 @@ const MapContainer = ({locations, parks}) => {
 
 
   const defaultCenter = {
-    lat: 41.3851, lng: 2.1734
+    lat: 44.409286, lng: -68.247501
   }
   
   return (
@@ -60,8 +64,14 @@ const MapContainer = ({locations, parks}) => {
         <GoogleMap
           mapContainerStyle={mapStyles}
           zoom={13}
-          center={defaultCenter}
-        />
+          center={defaultCenter}>
+            {latLongs.map(item => {
+              return (
+                <Marker position ={item}
+                />
+              )
+            })}
+          </GoogleMap>
      </LoadScript>
   )
 }
