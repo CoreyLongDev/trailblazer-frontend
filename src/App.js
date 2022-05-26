@@ -26,7 +26,6 @@ function App() {
           path="/parks"
           element={
             <>
-              <Index />
               <Sidebar />
             </>
           }

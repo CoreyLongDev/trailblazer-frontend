@@ -1,5 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
+import { Index } from "../../Pages/Index";
 
 function Sidebar() {
   return (
@@ -13,9 +14,7 @@ function Sidebar() {
           }}
           class="solid"
         />
-        <ul>
-          <li>Cards render here</li>
-        </ul>
+        <Index />
       </div>
     </>
   );
