@@ -69,7 +69,7 @@ const MapContainer = ({locations, parks}) => {
             {latLongs.map(item => {
               return (
                 <Marker position ={item}
-                />
+                ><i class="fa-regular fa-trees"></i></Marker>
                 
               )
             })}
