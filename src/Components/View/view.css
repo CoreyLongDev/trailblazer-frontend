@@ -1,6 +1,10 @@
 .fullName{
-    border-style: solid;
+    /* border-style: solid; */
     text-align: center;
+    font-family: 'Arvo', serif;
+
+    color: rgb(141, 4, 4);
+
 }
 
 .parkfacts{
@@ -12,11 +16,15 @@
 }
 
 p{
-   font-size: 12px; 
+   font-size: 14px; 
+   
 }
 
 span{
     text-align: center;
+    font-family: 'Arvo', serif;
+    color: rgb(141, 4, 4);
+
 }
 
 .parkfacts2{
@@ -25,4 +33,9 @@ span{
     width: 15%;
     
     
+}
+
+.text{
+    border-style: solid;
+    margin-top: 100px;
 }
