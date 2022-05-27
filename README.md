@@ -3,7 +3,7 @@
 <!-- HEADER -->
 <br />
     <h3 align="center">Trail Blazers (front-end)</h3>
-    <h4 align="center"><a href="https://github.com/TelleDelly/NPI-backend/">View back-end</a></h4>
+    <h4 align="center"><a href="https://github.com/TelleDelly/NPI-backend/">Back-end Repo</a></h4>
 
   <p align="center">
     A full-stack MERN application built to retrieve and display information on National Parks and hiking trails.
@@ -12,6 +12,7 @@
     <a href="/">/////ADD LIVE HOST LINK///</a>
     ·
     <a href="https://github.com/PatriotxZero/trailblazer-frontend/issues">Report Bug (Client Side)</a>
+     ·
     <a href="https://github.com/TelleDelly/NPI-backend/issues">Report Bug (Server Side)</a>
   </p>
     <br />
@@ -58,9 +59,8 @@ Front-End:
 - [React](https://reactjs.org/docs/getting-started.html)
 - [Bootstrap](https://getbootstrap.com)
 - [Material Design Bootstrap](https://mdbootstrap.com/docs/b5/react/)
-  <br />
 
-  Back-End:
+Back-End:
 
 - [Express](https://expressjs.com/)
 - [Node.js](https://nodejs.org/)
@@ -94,7 +94,7 @@ To install and set up a local version of this project:
    ```sh
    npm install mdb-react-ui-kit dotenv express  method-override mongodb mongoose node nodemon react-router-dom @react-google-maps/api
    ```
-   <p align="center">If mdb-react-ui-kit is giving you errors in browser try `mdb-react-ui-kit --force`</p>
+   <p align="center">If mdb-react-ui-kit is giving you errors in browser try <code>mdb-react-ui-kit --force</code></p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -122,11 +122,11 @@ To install and set up a local version of this project:
 
 ## Contact
 
-Jacob Vernau - [LinkedIn](https://www.linkedin.com/in/jacobvernau/) - jacobvernau@gmail.com
-Martin Wilson -
-David Dobrose -
-Myles Turner -
-Corey Long -
+[Jacob Vernau](https://www.linkedin.com/in/jacobvernau/)
+[Martin Wilson](https://www.linkedin.com/in/martin-wilson-tel/)
+[David Dobrose](https://www.linkedin.com/in/david-dobrose/)
+[Myles Turner](https://www.linkedin.com/in/myles-turner-b7629297/)
+[Corey Long](https://www.linkedin.com/in/coreylong90/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -134,7 +134,7 @@ Corey Long -
 
 ## Acknowledgments
 
-Some helpful resources that were used in the project!
+Some helpful resources that were used in the project:
 
 - [Heroku](https://www.heroku.com/)
 - [Material Design for Bootstrap 5 & React 17](https://mdbootstrap.com/docs/b5/react/)
