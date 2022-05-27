@@ -45,8 +45,10 @@ function App() {
         <Route path="/map" element={<MapContainer />} />
         <Route path="/:id/view" element={<View />} />
       </Routes>
-
-      <Footer />
+          <footer>
+          <Footer />
+          </footer>
+     
     </>
   );
 }

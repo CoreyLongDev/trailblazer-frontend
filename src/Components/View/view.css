@@ -1,0 +1,28 @@
+.fullName{
+    border-style: solid;
+    text-align: center;
+}
+
+.parkfacts{
+    border-style: solid;
+    size: 24px;
+    width: 15%;
+    height: 25%;
+    
+}
+
+p{
+   font-size: 12px; 
+}
+
+span{
+    text-align: center;
+}
+
+.parkfacts2{
+    border-style: solid;
+    size: 24px;
+    width: 15%;
+    
+    
+}
