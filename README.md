@@ -34,9 +34,8 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#project-process">Project Process</a></li>
     <li><a href="#wireframe">Wireframe</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#colors">Color Palette</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -107,6 +106,18 @@ To install and set up a local version of this project:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## Colors
+
+<ul>
+    <li>Green: #606c38</li>
+    <li>Dark Green: #283618</li>
+    <li>Tan: #fefae0</li>
+    <li>Light Brown: #dda15e</li>
+    <li>Brown: #bc6c25</li>
+</ul>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- CONTACT -->
 
 ## Contact
@@ -118,14 +129,6 @@ Myles Turner -
 Corey Long -
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-## Corey Long, Martin Wilson, Myles Turner, Jacob Vernau, David Dobrose
-
-## Information
-
-Full-Stack Application with Custom API, REST & CRUD functionality.
-
-This Progressive application focuses on national parks and trails for users to connect via ratings, reviews and other environmental statistics.
 
 <!-- ACKNOWLEDGMENTS -->
 
