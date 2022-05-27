@@ -36,19 +36,27 @@
 
 // export default MapWrapper
 
-import React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import React, {useState} from 'react';
+import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 
 
 const MapContainer = ({locations, parks}) => {
 
-    const mapMarkers = locations
-    console.log(parks)
+  const [selected, setSelected] = useState({})
+
+  const onSelect = item => {
+    setSelected(item)
+}
+
+    // const mapMarkers = locations
+    // console.log(parks)
     const latLongs = parks.map(park => {
-      return {lat : Number(park.latitude), lng: Number(park.longitude)}
+      return {name: park.fullName, location: {lat : Number(park.latitude), lng: Number(park.longitude)}}
     })
-  
+
     console.log(latLongs)
+  
+    // console.log(latLongs)
   const mapStyles = {        
     height: "100vh",
     width: "100%"};
@@ -61,18 +69,27 @@ const MapContainer = ({locations, parks}) => {
   
   return (
      <LoadScript
-       googleMapsApiKey=''>
+       googleMapsApiKey='AIzaSyCKM6KA7xJEgNXdTifGti9buECKKt0Zn2U'>
         <GoogleMap
           mapContainerStyle={mapStyles}
           zoom={13}
           center={defaultCenter}>
             {latLongs.map(item => {
               return (
-                <Marker position ={item}
-                ><i class="fa-regular fa-trees"></i></Marker>
+                <Marker position ={item.location} onClick= {()=> onSelect(item)} 
+                ></Marker>
                 
               )
             })}
+            {
+                selected.location && 
+                (
+                   <InfoWindow position={selected.location} clickable = {true} onCloseClick = {() => setSelected({})}>
+                       <p>{selected.name}</p>
+                   </InfoWindow>    
+                )
+            }
+            
           </GoogleMap>
      </LoadScript>
   )
