@@ -6,7 +6,7 @@
 // const MapWrapper = () => {
 
 //     const { isLoaded } = useLoadScript({
-//         googleMapsApiKey: 'AIzaSyDcKO1c_r8IdTbTpTj4rOBgx7lzhOiIsH4'
+//         googleMapsApiKey: ''
 //     })
 
 //     if(!isLoaded) return<div>Loading</div>
@@ -61,7 +61,7 @@ const MapContainer = ({locations, parks}) => {
   
   return (
      <LoadScript
-       googleMapsApiKey='AIzaSyDcKO1c_r8IdTbTpTj4rOBgx7lzhOiIsH4'>
+       googleMapsApiKey=''>
         <GoogleMap
           mapContainerStyle={mapStyles}
           zoom={13}
