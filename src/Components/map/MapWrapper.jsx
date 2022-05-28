@@ -40,18 +40,17 @@ import React, {useState} from 'react';
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 
 
-const MapContainer = ({locations, parks}) => {
+const MapContainer = ({locations}) => {
 
   const [selected, setSelected] = useState({})
+  const [parksData, setParksData] = useState()
 
   const onSelect = item => {
     setSelected(item)
-}
+  }
 
-    // const mapMarkers = locations
-    // console.log(parks)
-    const latLongs = parks.map(park => {
-      return {name: park.fullName, location: {lat : Number(park.latitude), lng: Number(park.longitude)}}
+    const latLongs = locations.map(park => {
+      return {location: {lat : Number(park.latitude), lng: Number(park.longitude)}}
     })
 
     console.log(latLongs)
@@ -61,15 +60,16 @@ const MapContainer = ({locations, parks}) => {
     height: "100vh",
     width: "100%"};
   
-
-
   const defaultCenter = {
     lat: 44.409286, lng: -68.247501
   }
-  
+
+  // const apiKey = process.env.local.REACT_APP_GOOGLE_MAPS_API_KEY
+  // console.log(apiKey)
+
   return (
      <LoadScript
-       googleMapsApiKey=''>
+       googleMapsApiKey="AIzaSyCKM6KA7xJEgNXdTifGti9buECKKt0Zn2U">
         <GoogleMap
           mapContainerStyle={mapStyles}
           zoom={13}

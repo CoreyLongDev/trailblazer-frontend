@@ -8,10 +8,8 @@ function Parks() {
 
   const locations= parks.map(park=> park.latLong);
 
-  const key = "EL1Bl0NrfZIjxhIIUVPEsrnWNz5o0cWaaKhvyWa7";
-
   
-  const url = `https://developer.nps.gov/api/v1/parks?&limit=10&api_key=${key}`;
+  const url = `https://fathomless-eyrie-16229.herokuapp.com/parks`;
 
   useEffect(() => {
     fetch(url)
@@ -26,7 +24,7 @@ function Parks() {
     <>
       <div style={{ display: "flex" }}>
         <Sidebar />
-        <MapContainer parks = {parks}/>
+        <MapContainer locations={locations}/>
         {/* <div><MapContainer/></div> */}
       </div>
     </>
