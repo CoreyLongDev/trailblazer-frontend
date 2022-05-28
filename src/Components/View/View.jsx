@@ -23,8 +23,9 @@ function View() {
       <>
       <div className='fullName'>
           <h1>{park.fullName}</h1>
-          <h4>{park.states}</h4>
-          <img height="100%" width="100%" src={park.images[0].url} alt ='image'></img>
+          
+          {park.addresses[0].line1}<br></br>{park.addresses[0].line2}<br></br>{park.addresses[0].city} |{park.addresses[0].stateCode}   | {park.addresses[0].postalCode}
+          <img height="100%" width="100%" src={park.images[0].url} alt ='...'></img>
       </div>
       
 
@@ -41,19 +42,42 @@ function View() {
     </div>
     
     <div className='parkfacts2'>
-    <strong>Activities: </strong>
+    <strong><h2>Activities:</h2> </strong>
     <br></br>
-    <br></br>
-   {park.activities[0].name}, {park.activities[1].name}, {park.activities[2].name}, {park.activities[3].name}, {park.activities[4].name}, {park.activities[5].name}
+    
+    <button>{park.activities[0].name}</button>  | <button>{park.activities[1].name}</button>  
+  <br></br>
+   <button>{park.activities[2].name}</button>    | <button>{park.activities[3].name}</button>  
+  <br></br>
+    <button>{park.activities[4].name}</button>   |   <button>{park.activities[5].name}</button>
    
    </div>
+<div className='box'>
+  <img className='pictures' height="35%" width="35%" src={park.images[3].url} alt ='...'></img> <img className='picture2' height="35%" width="35%" src={park.images[2].url} alt ='...'></img> 
+  <span>
+  <p className='hours'>
+  <h3>Hours: </h3>
+   <strong>Monday:</strong>  {park.operatingHours[0].standardHours.monday} 
+  <br></br>
+    <strong>Tuesday:</strong> {park.operatingHours[0].standardHours.tuesday}
+  <br></br>
+   <strong>Wednesday:</strong>  {park.operatingHours[0].standardHours.wednesday}
+  <br></br>
+   <strong>Thursday:</strong>  {park.operatingHours[0].standardHours.thursday}
+  <br></br>
+   <strong>Firday: </strong> {park.operatingHours[0].standardHours.friday}
+  <br></br>
+   <strong>Saturday:</strong>  {park.operatingHours[0].standardHours.saturday}
 
-   <div className='text'>
+  </p>
+  </span>
+  </div>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+<div className='text'>
+{park.description} 
 <br></br>
 <br></br>
-  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>  
+ 
 
    </div>
       </>
