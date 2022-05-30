@@ -83,6 +83,7 @@ const MapContainer = ({ locations, parks }) => {
             <Marker
               position={item.location}
               onClick={() => onSelect(item)}
+              icon={'https://raw.githubusercontent.com/google/material-design-icons/master/src/maps/forest/materialiconssharp/24px.svg'}
             ></Marker>
           );
         })}
