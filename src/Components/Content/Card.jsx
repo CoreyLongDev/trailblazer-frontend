@@ -14,8 +14,8 @@ export default function Card({ park }) {
   return (
     <MDBCard
       style={{
-        height: "100%",
-        margin: ".5rem",
+        height: "90%",
+        margin: ".25rem",
         display: "flex",
         flexDirection: "row",
         width: "144%",
@@ -48,15 +48,10 @@ export default function Card({ park }) {
             {park.addresses[0].city}, {park.addresses[0].stateCode}
           </div>
         </MDBCardText>
-        <div>
-        <Link to= {`/${park.id}/view` }state={park}>
-            <button
-              style={{ position: "absolute", right: "0", bottom: "0" }}
-              href="#"
-              className="btn btn-md btn-primary"
-            >
-              Visit
-            </button>
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <button className="btn btn-sm btn-secondary ">Locate</button>
+          <Link to={`/${park.id}/view`} target="_blank" state={park}>
+            <button className="btn btn-sm btn-primary">Visit</button>
           </Link>
         </div>
       </MDBCardBody>
