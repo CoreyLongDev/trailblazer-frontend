@@ -35,7 +35,7 @@
 
 // export default MapWrapper
 
-import React, { useState } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import {
   GoogleMap,
   LoadScript,
@@ -44,8 +44,10 @@ import {
 } from "@react-google-maps/api";
 import PopupCards from "../PopupCards/PopupCards";
 
-const MapContainer = ({ locations, parks }) => {
+const MapContainer = () => {
   const [selected, setSelected] = useState({});
+  const [parks, setParks] = useState();
+  const [latLong, setLatLong] = useState()
 
   const onSelect = (item) => {
     setSelected(item);
@@ -53,16 +55,15 @@ const MapContainer = ({ locations, parks }) => {
 
   // const mapMarkers = locations
   // console.log(parks)
-  const latLongs = parks.map((park) => {
-    return {
-      id: park.id,
-      name: park.fullName,
-      location: { lat: Number(park.latitude), lng: Number(park.longitude) },
-      description: park.description,
-    };
-  });
-
-  console.log(latLongs);
+  // const latLongs = parks.map((park) => {
+  //   return {
+  //     id: park.id,
+  //     name: park.fullName,
+  //     location: { lat: Number(park.latitude), lng: Number(park.longitude) },
+  //     description: park.description,
+  //   };
+  // });
+  
 
   // console.log(latLongs)
   const mapStyles = {
@@ -70,15 +71,30 @@ const MapContainer = ({ locations, parks }) => {
     width: "100%",
   };
 
-  const defaultCenter = {
-    lat: 44.409286,
-    lng: -68.247501,
-  };
+  const center = useMemo(() => ({lat: 44.409286,lng: -68.247501}),[])
+
+  useEffect(() => {
+    fetch('https://fathomless-eyrie-16229.herokuapp.com/parks')
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        setParks(res.data);
+        setLatLong(res.map((element) => {
+          return {
+                id: element.id,
+                name: element.fullName,
+                location: { lat: Number(element.latitude), lng: Number(element.longitude) },
+                description: element.description,
+              }
+        }))
+      })
+      .catch(console.error);
+  }, []);
 
   return (
     <LoadScript googleMapsApiKey="">
-      <GoogleMap mapContainerStyle={mapStyles} zoom={13} center={defaultCenter}>
-        {latLongs.map((item) => {
+      <GoogleMap mapContainerStyle={mapStyles} zoom={13} center={center}>
+        {latLong && latLong.map((item) => {
           return (
             <Marker
               position={item.location}
