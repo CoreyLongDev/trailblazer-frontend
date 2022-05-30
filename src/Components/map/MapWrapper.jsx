@@ -2,7 +2,6 @@
 // import { GoogleMap, useLoadScript,Marker} from '@react-google-maps/api'
 // import './map.css'
 
-
 // const MapWrapper = () => {
 
 //     const { isLoaded } = useLoadScript({
@@ -11,7 +10,7 @@
 
 //     if(!isLoaded) return<div>Loading</div>
 //     return <Map/>
-    
+
 // }
 
 // function Map() {
@@ -36,63 +35,69 @@
 
 // export default MapWrapper
 
-import React, {useState} from 'react';
-import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
+import React, { useState } from "react";
+import {
+  GoogleMap,
+  LoadScript,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
+import PopupCards from "../PopupCards/PopupCards";
 
+const MapContainer = ({ locations, parks }) => {
+  const [selected, setSelected] = useState({});
 
-const MapContainer = ({locations, parks}) => {
+  const onSelect = (item) => {
+    setSelected(item);
+  };
 
-  const [selected, setSelected] = useState({})
+  // const mapMarkers = locations
+  // console.log(parks)
+  const latLongs = parks.map((park) => {
+    return {
+      id: park.id,
+      name: park.fullName,
+      location: { lat: Number(park.latitude), lng: Number(park.longitude) },
+      description: park.description,
+    };
+  });
 
-  const onSelect = item => {
-    setSelected(item)
-}
+  console.log(latLongs);
 
-    // const mapMarkers = locations
-    // console.log(parks)
-    const latLongs = parks.map(park => {
-      return {name: park.fullName, location: {lat : Number(park.latitude), lng: Number(park.longitude)}}
-    })
-
-    console.log(latLongs)
-  
-    // console.log(latLongs)
-  const mapStyles = {        
+  // console.log(latLongs)
+  const mapStyles = {
     height: "100vh",
-    width: "100%"};
-  
-
+    width: "100%",
+  };
 
   const defaultCenter = {
-    lat: 44.409286, lng: -68.247501
-  }
-  
+    lat: 44.409286,
+    lng: -68.247501,
+  };
+
   return (
-     <LoadScript
-       googleMapsApiKey=''>
-        <GoogleMap
-          mapContainerStyle={mapStyles}
-          zoom={13}
-          center={defaultCenter}>
-            {latLongs.map(item => {
-              return (
-                <Marker position ={item.location} onClick= {()=> onSelect(item)} 
-                ></Marker>
-                
-              )
-            })}
-            {
-                selected.location && 
-                (
-                   <InfoWindow position={selected.location} clickable = {true} onCloseClick = {() => setSelected({})}>
-                       <p>{selected.name}</p>
-                   </InfoWindow>    
-                )
-            }
-            
-          </GoogleMap>
-     </LoadScript>
-  )
-}
+    <LoadScript googleMapsApiKey="">
+      <GoogleMap mapContainerStyle={mapStyles} zoom={13} center={defaultCenter}>
+        {latLongs.map((item) => {
+          return (
+            <Marker
+              position={item.location}
+              onClick={() => onSelect(item)}
+            ></Marker>
+          );
+        })}
+        {selected.location && (
+          <InfoWindow
+            position={selected.location}
+            clickable={true}
+            onCloseClick={() => setSelected({})}
+          >
+            <PopupCards selected={selected} />
+          </InfoWindow>
+        )}
+      </GoogleMap>
+    </LoadScript>
+  );
+};
 
 export default MapContainer;
