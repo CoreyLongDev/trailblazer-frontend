@@ -15,7 +15,6 @@ function Parks() {
     fetch(url)
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
         setParks(res.data);
       })
       .catch(console.error);
