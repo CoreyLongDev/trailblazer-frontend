@@ -2,22 +2,29 @@
     /* border-style: solid; */
     text-align: center;
     font-family: 'Arvo', serif;
-
-    color: rgb(141, 4, 4);
+    background-color: #fefae0;
+    color: #bc6c25;
 
 }
 
+
+h1{
+    color: #606c38;
+}
+
 .parkfacts{
-    border-style: solid;
-    /* size: 24px;
-    width: 15%;
-    height: 25%; */
-    
+    /* border-style: solid; */
+    border-radius: 8px;
+    background-color: #fefae0;
+    font-family: 'Arvo', serif;
+    text-align: center;
+    color: #bc6c25;
 }
 
 .hours{
     padding-left: 900px;
-    font-size: 25px;
+    font-size: 11px;
+    font-family: 'Arvo', serif;
     
     
 }
@@ -25,22 +32,30 @@
 span{
     text-align: center;
     font-family: 'Arvo', serif;
-    color: rgb(141, 4, 4);
+    color: #bc6c25;
 
 }
 
 .parkfacts2{
-    border-style: solid;
+    border-style: solid #bc6c25;
     /* size: 24px;
     width: 15%; */
     text-align: center;
-    
+    background-color: #fefae0;
+    border-radius: 8px;
+    font-family: 'Arvo', serif;
+    color: #bc6c25;
     
 }
 
 .text{
     border-style: solid;
     /* margin-top: 100px; */
+    font-family: 'Arvo', serif;
+    background-color: #fefae0;
+    border-radius: 8px;
+    color: #bc6c25;
+    
 }
 
 
@@ -48,11 +63,13 @@ span{
 button{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     background-color: #bc6c25;
+    font-family: 'Arvo', serif;
 }
 
 button:hover {
     background-color: #606c38; 
     color: white;
+    font-family: 'Arvo', serif;
   }
 
   .pictures{
@@ -62,48 +79,27 @@ button:hover {
 
   .picture2{
     border-radius: 8px;
+    float: right;
     
   }
 
 
   .box{
-      border-style: solid;
+      /* border-style: solid; */
+      font-family: 'Arvo', serif;
+      border-radius: 8px;
+      background-color: #fefae0;
+      color: #bc6c25;
+      
+      
   }
 
-  /* .container {
-    position: relative;
-    width: 50%;
+  img{
+      border-radius: 8px;
   }
-  
-  .image {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: transparent;
-  }
-  
-  .container:hover .overlay {
-    opacity: 1;
-  }
-  
-  .text2 {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-  } */
+
+.info{
+    background-color: #fefae0;
+    border-radius: 8px;
+}
+
