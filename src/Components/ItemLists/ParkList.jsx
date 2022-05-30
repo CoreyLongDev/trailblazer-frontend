@@ -5,8 +5,6 @@ import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 const ParkList = () => {
   const [parks, setParks] = useState([]);
 
-  console.log(parks);
-
   const key = "EL1Bl0NrfZIjxhIIUVPEsrnWNz5o0cWaaKhvyWa7";
 
   const searchInput = "starved rock";
@@ -16,7 +14,7 @@ const ParkList = () => {
     fetch(url)
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setParks(res.data);
       })
       .catch(console.error);
@@ -28,7 +26,7 @@ const ParkList = () => {
         <MDBRow className="mb-3">
           {parks.map((park) => (
             <MDBCol
-              style={{ padding: "0", marginBottom: "1rem" }}
+              style={{ padding: "0", marginBottom: ".5rem" }}
               md="8"
               className="col-example"
             >
