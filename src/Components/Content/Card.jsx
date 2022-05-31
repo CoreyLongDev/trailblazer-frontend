@@ -10,7 +10,9 @@ import { useLocation, Link, Route, Routes } from "react-router-dom";
 import View from "../View/View";
 import "../Sidebar/Sidebar.css";
 
-export default function Card({ park }) {
+export default function Card({ setMapCenter, park }) {
+
+
   return (
     <MDBCard
       style={{
@@ -49,7 +51,7 @@ export default function Card({ park }) {
           </div>
         </MDBCardText>
         <div className="d-flex flex-column justify-content-center align-items-center">
-          <button className="btn btn-sm btn-secondary ">Locate</button>
+          <button onClick={()=>setMapCenter({ lat: Number(park.latitude), lng: Number(park.longitude) })} className="btn btn-sm btn-secondary ">Locate</button>
           <Link to={`/${park.id}/view`} target="_blank" state={park}>
             <button className="btn btn-sm btn-primary">Visit</button>
           </Link>

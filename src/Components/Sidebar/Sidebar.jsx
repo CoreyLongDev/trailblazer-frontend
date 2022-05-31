@@ -2,7 +2,7 @@ import React from "react";
 import "./Sidebar.css";
 import ParkList from "../ItemLists/ParkList";
 
-function Sidebar() {
+function Sidebar({setMapCenter}) {
   return (
     <>
       <div className="sidebar">
@@ -13,7 +13,7 @@ function Sidebar() {
             width: "90%",
           }}
         />
-        <ParkList />
+        <ParkList setMapCenter={setMapCenter} />
       </div>
     </>
   );

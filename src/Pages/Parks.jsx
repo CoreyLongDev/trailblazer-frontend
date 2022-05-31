@@ -5,6 +5,13 @@ import MapContainer from '../Components/map/MapWrapper'
 function Parks() {
 
   const [parks, setParks] = useState([]);
+  const [mapCenter, setMapCenter] = useState(null)
+
+  const locate = (parkLatLong) =>{
+    setMapCenter(parkLatLong)
+  }
+
+  
 
   const locations= parks.map(park=> park.latLong);
 
@@ -25,8 +32,8 @@ function Parks() {
   return (
     <>
       <div style={{ display: "flex" }}>
-        <Sidebar />
-        <MapContainer parks = {parks}/>
+        <Sidebar setMapCenter= {locate} />
+        <MapContainer mapCenter = {mapCenter} parks = {parks}/>
         {/* <div><MapContainer/></div> */}
       </div>
     </>

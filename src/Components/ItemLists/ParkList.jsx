@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Card from "../Content/Card";
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 
-const ParkList = () => {
+const ParkList = ({setMapCenter}) => {
   const [parks, setParks] = useState([]);
 
   const key = "EL1Bl0NrfZIjxhIIUVPEsrnWNz5o0cWaaKhvyWa7";
@@ -30,7 +30,7 @@ const ParkList = () => {
               md="8"
               className="col-example"
             >
-              <Card park={park} />
+              <Card setMapCenter= {setMapCenter} park={park} />
             </MDBCol>
           ))}
         </MDBRow>
