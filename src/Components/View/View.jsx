@@ -34,7 +34,7 @@ function View() {
 <br></br>
  <strong>Thursday:</strong>  {park.operatingHours[0].standardHours.thursday}
 <br></br>
- <strong>Firday: </strong> {park.operatingHours[0].standardHours.friday}
+ <strong>Friday: </strong> {park.operatingHours[0].standardHours.friday}
 <br></br>
  <strong>Saturday:</strong>  {park.operatingHours[0].standardHours.saturday}
 
@@ -72,6 +72,17 @@ function View() {
 <div className='box'>
 <img className='pictures' height="35%" width="35%" src={park.images[3].url} alt ='...'></img>
 <img className='picture2' height="35%" width="35%" src={park.images[2].url} alt ='...'></img> 
+
+
+{/* <div className='container'>
+  <img src={park.images[0].url} alt = "Avatar" className='image'></img>
+  <div className='overlay'>
+    <div className='rocket'>{park.images[0].caption}</div>
+  </div>
+</div> */}
+
+
+
 
   </div>
 
