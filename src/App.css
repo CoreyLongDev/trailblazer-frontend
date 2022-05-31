@@ -28,26 +28,19 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 body {
-  background-color: #CDBFAD;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #cdbfad;
 }
 
-
-.footer-app{
+.footer-app {
   bottom: 0%;
   left: 0%;
   position: relative;
   padding-top: 50px;
 }
 
-.footerNotes{
+.footerNotes {
   font-size: 12px;
 }
