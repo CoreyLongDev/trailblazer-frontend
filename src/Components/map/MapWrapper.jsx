@@ -56,7 +56,7 @@ const MapContainer = ({ mapCenter, locations, parks }) => {
   // console.log(parks)
   const latLongs = parks.map((park) => {
     return {
-      id: park.id,
+      id: park._id,
       name: park.fullName,
       location: { lat: Number(park.latitude), lng: Number(park.longitude) },
       description: park.description,
