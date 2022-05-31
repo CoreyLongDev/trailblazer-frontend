@@ -92,6 +92,7 @@ const MapContainer = ({ mapCenter, locations, parks }) => {
             <Marker
               position={item.location}
               onClick={() => onSelect(item)}
+              // icon = 'https://cdn1.iconfinder.com/data/icons/map-objects/154/map-object-tree-park-forest-point-place-512.png'
             ></Marker>
           );
         })}
