@@ -11,12 +11,14 @@ import "./NavBar.css";
 
 const NavBar = () => {
   return (
-    <MDBNavbar expand="lg" style={{ backgroundColor: "blue", padding: "0" }}>
+    <MDBNavbar expand="lg" style={{ padding: "0" }}>
       <MDBContainer
         fluid
         style={{
-          backgroundColor: "gray",
+          backgroundColor: "#606c38",
           maxHeight: "300px",
+          padding: "5px",
+          color: "#dda15e",
         }}
       >
         <nav aria-label="breadcrumb">
