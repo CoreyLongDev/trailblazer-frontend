@@ -5,17 +5,19 @@ import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 const ParkList = ({setMapCenter}) => {
   const [parks, setParks] = useState([]);
 
-  const key = "EL1Bl0NrfZIjxhIIUVPEsrnWNz5o0cWaaKhvyWa7";
+  // const key = "EL1Bl0NrfZIjxhIIUVPEsrnWNz5o0cWaaKhvyWa7";
 
   
-  const url = `https://developer.nps.gov/api/v1/parks?&limit=10&api_key=${key}`;
+  // const url = `https://developer.nps.gov/api/v1/parks?&limit=10&api_key=${key}`;
+
+  const url = 'https://fathomless-eyrie-16229.herokuapp.com/parks';
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((res) => {
         // console.log(res);
-        setParks(res.data);
+        setParks(res);
       })
       .catch(console.error);
   }, []);
