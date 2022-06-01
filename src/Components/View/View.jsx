@@ -2,6 +2,12 @@ import React, { useEffect, useState } from 'react'
 import {  useParams } from 'react-router-dom';
 import './view.css'
 import FeatComments from '../Feat-Comments/FeatComments';
+import {
+  MDBCarousel,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBCarouselElement,
+} from 'mdb-react-ui-kit';
 // import { MDBIcon } from 'mdb-react-ui-kit';
 function View() {
     const [park, setPark] = useState(null);
@@ -18,7 +24,7 @@ function View() {
           .catch(console.error);
       }, []);
   return (
-<>
+<div>
     
     {park && (
       <>
@@ -71,16 +77,34 @@ function View() {
    <br></br>
    <br></br>
    </div>
-<div className='box'>
-<img className='pictures' height="35%" width="35%" src={park.images[3].url} alt ='...'></img>
-<img className='picture2' height="35%" width="35%" src={park.images[2].url} alt ='...'></img> 
+
+  <div >
+     <h1>Pictures</h1>
+     <MDBCarousel showControls fade>
+      <MDBCarouselInner>
+        <MDBCarouselItem className='active'>
+          <MDBCarouselElement src={park.images[1].url} alt='...' />
+        </MDBCarouselItem>
+        {park.images[2] && <MDBCarouselItem>
+          <MDBCarouselElement src={park.images[2].url} alt='...' />
+        </MDBCarouselItem>}
+        {park.images[3] && <MDBCarouselItem>
+          <MDBCarouselElement src={park.images[3].url} alt='...' />
+        </MDBCarouselItem>}
+      </MDBCarouselInner>
+    </MDBCarousel>
+
+   </div>
+
+   
 
 
 
 
 
 
-  </div>
+
+  
 
 <div className='text'>
 <h1>{park.fullName} Description</h1>
@@ -100,7 +124,7 @@ function View() {
    
     
       
-</>
+</div>
 
   )
  
