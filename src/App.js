@@ -15,13 +15,12 @@ import Trails from "./Pages/Trails";
 function App() {
   return (
     <>
-    <header>
+      <header>
         <Header />
         <NavBar />
-        <SearchBar />
+        {/* <SearchBar /> */}
         {/* <div><MapContainer/></div> */}
       </header>
-      
 
       <Routes>
         <Route path="/" element={<Welcome />} />
@@ -45,10 +44,9 @@ function App() {
         <Route path="/map" element={<MapContainer />} />
         <Route path="/:id/view" element={<View />} />
       </Routes>
-          <footer>
-          <Footer />
-          </footer>
-     
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
