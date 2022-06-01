@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import {  useParams } from 'react-router-dom';
 import './view.css'
+import FeatComments from '../Feat-Comments/FeatComments';
 // import { MDBIcon } from 'mdb-react-ui-kit';
 function View() {
     const [park, setPark] = useState(null);
     let {id} = useParams()
+    // const key = "EL1Bl0NrfZIjxhIIUVPEsrnWNz5o0cWaaKhvyWa7"
     const url = `https://fathomless-eyrie-16229.herokuapp.com/parks/${id}`;
     useEffect(() => {
         fetch(url)
-          .then((res) => res.json())
+        .then((res) => res.json())
           .then((res) => {
             console.log(res);
             setPark(res);
@@ -34,7 +36,7 @@ function View() {
 <br></br>
  <strong>Thursday:</strong>  {park.operatingHours[0].standardHours.thursday}
 <br></br>
- <strong>Firday: </strong> {park.operatingHours[0].standardHours.friday}
+ <strong>Friday: </strong> {park.operatingHours[0].standardHours.friday}
 <br></br>
  <strong>Saturday:</strong>  {park.operatingHours[0].standardHours.saturday}
 
@@ -73,6 +75,11 @@ function View() {
 <img className='pictures' height="35%" width="35%" src={park.images[3].url} alt ='...'></img>
 <img className='picture2' height="35%" width="35%" src={park.images[2].url} alt ='...'></img> 
 
+
+
+
+
+
   </div>
 
 <div className='text'>
@@ -80,9 +87,12 @@ function View() {
 {park.description} 
 <br></br>
 <br></br>
- 
+
 
    </div>
+   <div className='comments'>
+<FeatComments/>
+</div>
       </>
 
     )} 
