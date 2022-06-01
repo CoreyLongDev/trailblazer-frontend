@@ -24,7 +24,7 @@ export const SearchBar = () => {
     }
   };
 
-  const url = 'https://fathomless-eyrie-16229.herokuapp.com/parks';
+  const url = "https://fathomless-eyrie-16229.herokuapp.com/parks";
 
   useEffect(() => {
     fetch(url)
@@ -54,10 +54,11 @@ export const SearchBar = () => {
               value={wordEntered}
             />
             <MDBIcon
-              className="text-black p-0 searchIcon "
+              className="text-#dda15e p-0 searchIcon "
               fas
               size="lg"
               icon="search-location"
+              // Color of the magnifying glass is handled under src/Components/Navbar in-line at the MDBContainer
             />
 
             {/* !!!!!!!!!!!!!!! */}

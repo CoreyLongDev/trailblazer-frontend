@@ -1,6 +1,6 @@
 .searchInputs {
   display: flex;
-  border: 2px black solid;
+  border: 2px #dda15e solid;
   border-radius: 15px;
   padding: 5px;
 }
@@ -27,18 +27,18 @@ input:focus {
 /* placeholder color change information from: https://www.w3schools.com/howto/howto_css_placeholder.asp */
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: black;
+  color: #b87e3c;
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: black;
+  color: #dda15e;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: black;
+  color: #dda15e;
 }
 
 /* Data Styling Below */
@@ -74,7 +74,7 @@ a {
 }
 
 a:hover {
-  background-color: lightgray;
+  /* background-color: lightgray; */
 }
 
 .clearBtn {

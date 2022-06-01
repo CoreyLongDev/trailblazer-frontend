@@ -6,13 +6,10 @@ import {
   MDBCardText,
   MDBCardImage,
 } from "mdb-react-ui-kit";
-import { useLocation, Link, Route, Routes } from "react-router-dom";
-import View from "../View/View";
+import { Link } from "react-router-dom";
 import "../Sidebar/Sidebar.css";
 
 export default function Card({ setMapCenter, park }) {
-
-
   return (
     <MDBCard
       style={{
@@ -33,7 +30,12 @@ export default function Card({ setMapCenter, park }) {
         }}
       >
         <MDBCardImage
-          style={{ height: "100%", width: "100%", objectFit: "cover" }}
+          style={{
+            height: "100%",
+            width: "100%",
+            objectFit: "cover",
+            borderRadius: "0",
+          }}
           src={park.images[0].url}
           fluid
           alt={park.name}
@@ -51,9 +53,25 @@ export default function Card({ setMapCenter, park }) {
           </div>
         </MDBCardText>
         <div className="d-flex flex-column justify-content-center align-items-center">
-          <button onClick={()=>setMapCenter({ lat: Number(park.latitude), lng: Number(park.longitude) })} className="btn btn-sm btn-secondary ">Locate</button>
+          <button
+            onClick={() =>
+              setMapCenter({
+                lat: Number(park.latitude),
+                lng: Number(park.longitude),
+              })
+            }
+            style={{ backgroundColor: "#bc6c25", color: "white" }}
+            className="btn btn-sm "
+          >
+            Locate
+          </button>
           <Link to={`/${park._id}/view`} target="_blank" state={park}>
-            <button className="btn btn-sm btn-primary">Visit</button>
+            <button
+              className="btn btn-sm"
+              style={{ backgroundColor: "#606c38", color: "white" }}
+            >
+              Visit
+            </button>
           </Link>
         </div>
       </MDBCardBody>
