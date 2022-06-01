@@ -5,14 +5,13 @@ import './view.css'
 function View() {
     const [park, setPark] = useState(null);
     let {id} = useParams()
-    const key = "EL1Bl0NrfZIjxhIIUVPEsrnWNz5o0cWaaKhvyWa7"
-    const url = `https://developer.nps.gov/api/v1/parks?q=${id}&limit=10&api_key=${key}`;
+    const url = `https://fathomless-eyrie-16229.herokuapp.com/parks/${id}`;
     useEffect(() => {
         fetch(url)
           .then((res) => res.json())
           .then((res) => {
-            console.log(res.data[0]);
-            setPark(res.data[0]);
+            console.log(res);
+            setPark(res);
           })
           .catch(console.error);
       }, []);
@@ -65,11 +64,8 @@ function View() {
     <strong><h1>Activities:</h1> </strong>
     <br></br>
     
-    <button>{park.activities[0].name}</button>  | <button>{park.activities[1].name}</button>  
-  <br></br>
-   <button>{park.activities[2].name}</button>    | <button>{park.activities[3].name}</button>  
-  <br></br>
-    <button>{park.activities[4].name}</button>   |   <button>{park.activities[5].name}</button>
+    {park.activities.map(item=> <button>{item.name}</button> )}
+     
    <br></br>
    <br></br>
    </div>
