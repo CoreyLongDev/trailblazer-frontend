@@ -72,8 +72,10 @@ function View() {
    <br></br>
    </div>
 <div className='box'>
-<img className='pictures' height="35%" width="35%" src={park.images[3].url} alt ='...'></img>
-<img className='picture2' height="35%" width="35%" src={park.images[2].url} alt ='...'></img> 
+<img className='pictures' height="33%" width="33%" src={park.images[3].url} alt ='...'></img>
+<img className='picture2' height="33%" width="33%" src={park.images[2].url} alt ='...'></img>
+<img className='picture3' height="33%" width="33%" src={park.images[1].url} alt ='...'></img>
+
 
 
 
