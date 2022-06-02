@@ -9,12 +9,14 @@ function FeatComments({ parkID }) {
 
   //Test to see if adding to the useEffect dependecy array will force a rerender it does not so futher fixing is required
   //!!TODO::Must have clean rerender no refresh
-  let fetchToggle = true;
 
   const [comments, setComments] = useState([]);
   const [commentText, setCommentText] = useState();
   const [commentTitle, setCommentTitle] = useState();
   const [editComment, setEditComment] = useState(false);
+  const [editCommentTitle, setEditCommentTitle] = useState()
+  const [editCommentBody, setEditCommentBody] = useState()
+  
 
   //function definitions
 
@@ -47,12 +49,36 @@ function FeatComments({ parkID }) {
         console.log(res);
       })
       .catch(console.error);
-
-    fetchToggle = !fetchToggle;
   };
 
   //updatesComment
-  const updateComment = () => {};
+  const updateComment = (e) => {
+    e.preventDefault()
+    const index = e.target.dataset.key
+    
+    const updatedComments = [...comments]
+    updatedComments[index].title = editCommentTitle
+    updatedComments[index].commentBody = editCommentBody
+    const commentID = updatedComments[index]._id
+
+    setComments(updatedComments)
+
+    toggleEdit()
+
+    const comment = {
+        title: editCommentTitle,
+        commentBody: editCommentBody,
+      }
+
+    // axios.put(`https://fathomless-eyrie-16229.herokuapp.com/comments/edit/${commentID}`, comment)
+    axios.put(`http://localhost:4000/comments/edit/${commentID}`, comment)
+    .catch(console.error)
+  };
+
+  //toggles commit edit selection
+  const toggleEdit = () => {
+    setEditComment(!editComment)
+  }
 
   //page needs to be refreshed to see changes must find fix
   //deletesComment
@@ -94,6 +120,16 @@ function FeatComments({ parkID }) {
     setCommentTitle(e.target.value);
   };
 
+  const handleEditComTitleChange = (e) => {
+    setEditCommentTitle(e.target.value)
+  }
+
+  const handleEditComBodyChange = (e) => {
+    setEditCommentBody(e.target.value)
+  }
+
+
+
   //Sideeffcts to grab comments
   //Add a depenncy to regrab comments
 
@@ -132,18 +168,46 @@ function FeatComments({ parkID }) {
                 collapseId={index}
                 headerTitle={comment.title}
               >
-                {comment.commentBody}
+                {editComment
+                ?<>
+                  <MDBTextArea
+                    onChange={handleEditComTitleChange}
+                    label='title'
+                    name='title'
+                    className='comment-text-area'
+                    defaultValue={comment.title}
+                    rows={1}
+                  />
+                  <MDBTextArea
+                    onChange={handleEditComBodyChange}
+                    label='commentBody'
+                    name='commentBody'
+                    className="comment-text-area"
+                    defaultValue={comment.commentBody}
+                    row={4}
+                  />
+                  <button onClick={toggleEdit}>Cancel</button>
+                  <button data-key={index} onClick={updateComment}>Save</button>
+                </>
+                : <>
+                  {comment.commentBody}
+                  <button data-key={index} onClick={deleteComment}>
+                  Delete
+                  </button>
+                  <button data-key={index} onClick={toggleEdit}>
+                  Edit
+                  </button>
+                </>
+                }
+
+                {/* {comment.commentBody}
                 <button data-key={index} onClick={deleteComment}>
                   Delete
                 </button>
-                <button data-key={index} onClick={updateComment}>
+                <button data-key={index} onClick={toggleEdit}>
                   Edit
-                </button>
-                {editComment && (
-                  <div>
-                    <MDBTextArea></MDBTextArea>
-                  </div>
-                )}
+                </button> */}
+                
               </MDBAccordionItem>
             );
           })}
