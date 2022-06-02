@@ -7,6 +7,13 @@
 
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 20%,20%,20%;
+    grid-template-rows: 20%;
+    align-items: center;
+}
+
 
 h1{
     color: #606c38;
@@ -58,9 +65,14 @@ span{
     
 }
 
+p{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #bc6c25;
+    font-family: 'Arvo', serif;
+    color: black;
+}
 
-
-button{
+button {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     background-color: #bc6c25;
     font-family: 'Arvo', serif;

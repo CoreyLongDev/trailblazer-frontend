@@ -71,8 +71,10 @@ function View() {
     <div className='parkfacts2'>
     <strong><h1>Activities:</h1> </strong>
     <br></br>
-    
-    {park.activities.map(item=> <button>{item.name}</button> )}
+    <div >
+       {park.activities.map(item=> <button>{item.name}</button> )}
+       </div>
+   
      
    <br></br>
    <br></br>
