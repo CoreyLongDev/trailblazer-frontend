@@ -83,20 +83,23 @@ export const SearchBar = () => {
             )} */}
           </div>
           {filteredParks.length !== 0 && (
-            <div className="dataResult">
+            <ul className="dataResult">
               {filteredParks.slice(0, 15).map((park, key) => (
                 // slice method keeps it from showing EVERYTHING. Will keep it to best 15 options
-                <a
-                  key={key}
-                  className="dataItem"
-                  href={`/${park._id}/view`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <p> {park.fullName}</p>
-                </a>
+                <li>
+                  {" "}
+                  <a
+                    key={key}
+                    className="dataItem"
+                    href={`/${park._id}/view`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <p> {park.fullName}</p>
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           )}
         </div>
       )}
