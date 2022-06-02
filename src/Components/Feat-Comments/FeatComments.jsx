@@ -23,6 +23,7 @@ function FeatComments({ parkID }) {
   //adds comments to a park
   const addComment = (e) => {
     e.preventDefault();
+    console.log(e.target)
     const filteredComments = [...comments];
     
     setComments(filteredComments);
@@ -35,10 +36,9 @@ function FeatComments({ parkID }) {
       },
     ];
     filteredComments.push(comment[0]);
-    console.log(filteredComments);
-    
-    // const sendComment = JSON.stringify(comment)
-    // console.log(sendComment)
+  
+    setCommentText('')
+    setCommentTitle('')
 
     axios
       .post(
@@ -54,11 +54,22 @@ function FeatComments({ parkID }) {
   //updatesComment
   const updateComment = (e) => {
     e.preventDefault()
+    
     const index = e.target.dataset.key
+    let formTitle = e.target.dataset.title
+    let formBody = e.target.dataset.body
+
+    if(editCommentTitle != null){
+      formTitle = editCommentTitle
+    }
+
+    if(editCommentBody != null){
+      formBody = editCommentBody
+    }
     
     const updatedComments = [...comments]
-    updatedComments[index].title = editCommentTitle
-    updatedComments[index].commentBody = editCommentBody
+    updatedComments[index].title = formTitle
+    updatedComments[index].commentBody = formBody
     const commentID = updatedComments[index]._id
 
     setComments(updatedComments)
@@ -70,8 +81,8 @@ function FeatComments({ parkID }) {
         commentBody: editCommentBody,
       }
 
-    // axios.put(`https://fathomless-eyrie-16229.herokuapp.com/comments/edit/${commentID}`, comment)
-    axios.put(`http://localhost:4000/comments/edit/${commentID}`, comment)
+    axios.put(`https://fathomless-eyrie-16229.herokuapp.com/comments/edit/${commentID}`, comment)
+    // axios.put(`http://localhost:4000/comments/edit/${commentID}`, comment)
     .catch(console.error)
   };
 
@@ -91,8 +102,6 @@ function FeatComments({ parkID }) {
     // });
     const filteredComments = [...comments];
     filteredComments.splice(index, 1);
-    console.log(filteredComments);
-    console.log(index);
     setComments(filteredComments);
     axios
       .delete(
@@ -144,17 +153,19 @@ function FeatComments({ parkID }) {
     <div>
       <MDBTextArea
         onChange={handleTitleChange}
-        label="title"
+        label=""
         name="title"
         wrapperClass="mb-4"
         id="title-input-field"
+        value={commentTitle}
         rows={1}
       />
       <MDBTextArea
         onChange={handleComBodyChange}
-        label="commentBody"
+        label=""
         name="commentBody"
         id="textAreaExample"
+        value={commentText}
         rows={4}
       />
       <button onClick={addComment}>Add Comment</button>
@@ -187,7 +198,7 @@ function FeatComments({ parkID }) {
                     row={4}
                   />
                   <button onClick={toggleEdit}>Cancel</button>
-                  <button data-key={index} onClick={updateComment}>Save</button>
+                  <button data-key={index} data-title={comment.title} data-body={comment.commentBody} onClick={updateComment}>Save</button>
                 </>
                 : <>
                   {comment.commentBody}
