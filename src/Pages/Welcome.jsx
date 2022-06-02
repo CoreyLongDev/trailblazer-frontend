@@ -22,7 +22,6 @@ const Welcome = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          marginTop: ".5rem",
         }}
       >
         <div
@@ -40,7 +39,7 @@ const Welcome = () => {
               <h1 className="mb-3 text-white">Trail Blazers</h1>
               <hr
                 style={{
-                  borderTop: "3px solid #bbb",
+                  borderTop: "3px solid #fefae0",
                 }}
                 class="solid"
               />
@@ -55,7 +54,10 @@ const Welcome = () => {
 
       <MDBContainer
         className="d-flex flex-md-row  mb-3  "
-        style={{ marginTop: ".5rem", justifyContent: "space-evenly" }}
+        style={{
+          marginTop: ".5rem",
+          justifyContent: "space-evenly",
+        }}
       >
         {/* CARD 1 */}
         <MDBCard background="dark" className="text-white w-25">

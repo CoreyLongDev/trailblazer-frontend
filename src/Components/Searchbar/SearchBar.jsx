@@ -24,7 +24,7 @@ export const SearchBar = () => {
     }
   };
 
-  const url = 'https://fathomless-eyrie-16229.herokuapp.com/parks';
+  const url = "https://fathomless-eyrie-16229.herokuapp.com/parks";
 
   useEffect(() => {
     fetch(url)
@@ -54,10 +54,11 @@ export const SearchBar = () => {
               value={wordEntered}
             />
             <MDBIcon
-              className="text-black p-0 searchIcon "
+              className="text-#dda15e p-0 searchIcon "
               fas
               size="lg"
               icon="search-location"
+              // Color of the magnifying glass is handled under src/Components/Navbar in-line at the MDBContainer
             />
 
             {/* !!!!!!!!!!!!!!! */}
@@ -82,20 +83,23 @@ export const SearchBar = () => {
             )} */}
           </div>
           {filteredParks.length !== 0 && (
-            <div className="dataResult">
+            <ul className="dataResult">
               {filteredParks.slice(0, 15).map((park, key) => (
                 // slice method keeps it from showing EVERYTHING. Will keep it to best 15 options
-                <a
-                  key={key}
-                  className="dataItem"
-                  href={`/${park._id}/view`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <p> {park.fullName}</p>
-                </a>
+                <li>
+                  {" "}
+                  <a
+                    key={key}
+                    className="dataItem"
+                    href={`/${park._id}/view`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <p> {park.fullName}</p>
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           )}
         </div>
       )}
