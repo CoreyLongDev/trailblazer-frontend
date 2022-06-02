@@ -4,15 +4,18 @@ import axios from 'axios'
 import '../View/view.css'
 
 function FeatComments({parkID}) {
-  
 
   //State and data members
   const fetchUrl = `https://fathomless-eyrie-16229.herokuapp.com/comments/${parkID}`
 
+  //Test to see if adding to the useEffect dependecy array will force a rerender it does not so futher fixing is required
+  //!!TODO::Must have clean rerender no refresh
+  let fetchToggle = true
 
-  const [comments, setComments] = useState()
+  const [comments, setComments] = useState([])
   const [commentText, setCommentText] = useState()
   const [commentTitle, setCommentTitle] = useState()
+  const [editComment, setEditComment] = useState(false)
 
   //function definitions
   
@@ -35,14 +38,34 @@ function FeatComments({parkID}) {
     })
     .catch(console.error)
 
+    fetchToggle = !fetchToggle
+
   }
 
   //updatesComment
   const updateComment = () => {
+  
   }
 
+  //page needs to be refreshed to see changes must find fix
   //deletesComment
-  const deleteComment = () => {
+  const deleteComment = (e) => {
+    e.preventDefault()
+    const index = e.target.dataset.key
+    axios.delete(`https://fathomless-eyrie-16229.herokuapp.com/comments/delete/${comments[index]._id}`)
+    .then(res => {
+      console.log(res)
+    })
+    .catch(console.error)
+
+    //Steps to refresh on page
+    //Grab the index of the comment from e.target.dataset.key
+    //Using the index we remove the comment from Comments(the state variable) and return a new array without the deleted comment
+    //setComments(newArr)
+    
+
+    //
+    
   }
 
   //sets state for comment box text
@@ -77,6 +100,12 @@ function FeatComments({parkID}) {
           return(
             <MDBAccordionItem key={index} collapseId={index} headerTitle={comment.title}>
               {comment.commentBody}
+              <button data-key={index} onClick={deleteComment}>Delete</button>
+              <button data-key={index} onClick={updateComment}>Edit</button>
+              {editComment && <div>
+                <MDBTextArea>
+                </MDBTextArea>
+              </div>} 
             </MDBAccordionItem>
           )  
       })}
