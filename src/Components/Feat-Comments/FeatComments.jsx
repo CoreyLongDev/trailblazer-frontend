@@ -25,7 +25,7 @@ function FeatComments({ parkID }) {
     e.preventDefault();
     console.log(e.target)
     const filteredComments = [...comments];
-    
+
     setComments(filteredComments);
 
     const comment = [
@@ -151,6 +151,7 @@ function FeatComments({ parkID }) {
 
   return (
     <div>
+      <h5>Tittle</h5>
       <MDBTextArea
         onChange={handleTitleChange}
         label=""
@@ -160,12 +161,14 @@ function FeatComments({ parkID }) {
         value={commentTitle}
         rows={1}
       />
+      <h6>Body</h6>
       <MDBTextArea
         onChange={handleComBodyChange}
         label=""
         name="commentBody"
         id="textAreaExample"
         value={commentText}
+        spellCheck="true"
         rows={4}
       />
       <button onClick={addComment}>Add Comment</button>
