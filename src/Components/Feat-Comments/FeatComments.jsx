@@ -23,7 +23,7 @@ function FeatComments({ parkID }) {
   //adds comments to a park
   const addComment = (e) => {
     e.preventDefault();
-    console.log(e.target)
+  
     const filteredComments = [...comments];
 
     setComments(filteredComments);
@@ -45,10 +45,7 @@ function FeatComments({ parkID }) {
         `https://fathomless-eyrie-16229.herokuapp.com/comments/add`,
         comment
       )
-      .then((res) => {
-        console.log(res);
-      })
-      .catch(console.error);
+    .catch(console.error);
   };
 
   //updatesComment
@@ -82,8 +79,7 @@ function FeatComments({ parkID }) {
       }
 
     axios.put(`https://fathomless-eyrie-16229.herokuapp.com/comments/edit/${commentID}`, comment)
-    // axios.put(`http://localhost:4000/comments/edit/${commentID}`, comment)
-    .catch(console.error)
+  .catch(console.error)
   };
 
   //toggles commit edit selection
@@ -96,10 +92,7 @@ function FeatComments({ parkID }) {
   const deleteComment = (e) => {
     e.preventDefault();
     const index = e.target.dataset.key;
-    // const newComents = comments.filter((val, i) => {
-    //   console.log(index, val._id);
-    // return  val._id !== comments[e.target.dataset.key];
-    // });
+   
     const filteredComments = [...comments];
     filteredComments.splice(index, 1);
     setComments(filteredComments);
@@ -107,17 +100,14 @@ function FeatComments({ parkID }) {
       .delete(
         `https://fathomless-eyrie-16229.herokuapp.com/comments/delete/${comments[index]._id}`
       )
-      .then((res) => {
-        console.log(res);
-      })
-      .catch(console.error);
+    .catch(console.error);
 
     //Steps to refresh on page
     //Grab the index of the comment from e.target.dataset.key
     //Using the index we remove the comment from Comments(the state variable) and return a new array without the deleted comment
     //setComments(newArr)
 
-    //
+    
   };
 
   //sets state for comment box text
@@ -184,17 +174,19 @@ function FeatComments({ parkID }) {
               >
                 {editComment
                 ?<>
+                <h5>Tittle</h5>
                   <MDBTextArea
                     onChange={handleEditComTitleChange}
-                    label='title'
+                    label=''
                     name='title'
                     className='comment-text-area'
                     defaultValue={comment.title}
                     rows={1}
                   />
+                  <h5>Body</h5>
                   <MDBTextArea
                     onChange={handleEditComBodyChange}
-                    label='commentBody'
+                    label=''
                     name='commentBody'
                     className="comment-text-area"
                     defaultValue={comment.commentBody}
@@ -204,7 +196,7 @@ function FeatComments({ parkID }) {
                   <button data-key={index} data-title={comment.title} data-body={comment.commentBody} onClick={updateComment}>Save</button>
                 </>
                 : <>
-                  {comment.commentBody}
+                  <h5>{comment.commentBody}</h5>
                   <button data-key={index} onClick={deleteComment}>
                   Delete
                   </button>
@@ -214,13 +206,7 @@ function FeatComments({ parkID }) {
                 </>
                 }
 
-                {/* {comment.commentBody}
-                <button data-key={index} onClick={deleteComment}>
-                  Delete
-                </button>
-                <button data-key={index} onClick={toggleEdit}>
-                  Edit
-                </button> */}
+               
                 
               </MDBAccordionItem>
             );
