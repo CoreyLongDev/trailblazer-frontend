@@ -117,7 +117,7 @@ function View() {
 
    </div>
    <div className='comments'>
-<FeatComments/>
+<FeatComments parkID={id}/>
 </div>
       </>
 
