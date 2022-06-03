@@ -118,7 +118,7 @@ function View() {
           </div>
           <hr></hr>
           <div className="comments">
-            <FeatComments parkID={id} />
+            <FeatComments park={park} parkID={id} />
           </div>
         </>
       )}
