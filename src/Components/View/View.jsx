@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./view.css";
-import FeatComments from "../Feat-Comments/FeatComments";
+// import FeatComments from "../Feat-Comments/FeatComments";
 import {
   MDBCarousel,
   MDBCarouselInner,
   MDBCarouselItem,
   MDBCarouselElement,
 } from "mdb-react-ui-kit";
+import { ShowComments } from "../Feat-Comments/ShowComments";
 // import { MDBIcon } from 'mdb-react-ui-kit';
 function View() {
   const [park, setPark] = useState(null);
@@ -118,7 +119,7 @@ function View() {
           </div>
           <hr></hr>
           <div className="comments">
-            <FeatComments park={park} parkID={id} />
+            <ShowComments park={park} parkID={id} />
           </div>
         </>
       )}
