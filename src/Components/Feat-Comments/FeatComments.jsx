@@ -3,7 +3,7 @@ import { MDBTextArea, MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 import axios from "axios";
 import "../View/view.css";
 
-function FeatComments({ parkID, park }) {
+function FeatComments({ parkID }) {
   //State and data members
   const fetchUrl = `https://fathomless-eyrie-16229.herokuapp.com/comments/${parkID}`;
 
@@ -141,7 +141,7 @@ function FeatComments({ parkID, park }) {
 
   return (
     <div>
-      <h5>Name</h5>
+      <h5>Tittle</h5>
       <MDBTextArea
         onChange={handleTitleChange}
         label=""
@@ -151,7 +151,7 @@ function FeatComments({ parkID, park }) {
         value={commentTitle}
         rows={1}
       />
-      <h6>Tell us about your trip to {park.fullName}!</h6>
+      <h6>Body</h6>
       <MDBTextArea
         onChange={handleComBodyChange}
         label=""
@@ -163,7 +163,7 @@ function FeatComments({ parkID, park }) {
       />
       <button onClick={addComment}>Add Comment</button>
 
-      <MDBAccordion initialActive={null}>
+      <MDBAccordion initialActive={0}>
         {comments &&
           comments.map((comment, index) => {
             return (
@@ -174,7 +174,7 @@ function FeatComments({ parkID, park }) {
               >
                 {editComment
                 ?<>
-                <h5>Name</h5>
+                <h5>Tittle</h5>
                   <MDBTextArea
                     onChange={handleEditComTitleChange}
                     label=''
@@ -183,7 +183,7 @@ function FeatComments({ parkID, park }) {
                     defaultValue={comment.title}
                     rows={1}
                   />
-                  <h5>Tell us about your trip!</h5>
+                  <h5>Body</h5>
                   <MDBTextArea
                     onChange={handleEditComBodyChange}
                     label=''
