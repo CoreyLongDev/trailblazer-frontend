@@ -1,5 +1,6 @@
 import React from 'react'
 import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardGroup } from 'mdb-react-ui-kit';
+import { ShowComments } from '../Components/Feat-Comments/ShowComments';
 
 export const About = () => {
 
@@ -61,6 +62,10 @@ export const About = () => {
       </MDBCard>
     ))}
    </MDBCardGroup>
+
+   {/* <ShowComments/> */}
+
+
 
     
 

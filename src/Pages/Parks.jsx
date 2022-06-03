@@ -32,7 +32,7 @@ function Parks() {
   return (
     <>
       <div style={{ display: "flex" }}>
-        <Sidebar setMapCenter= {locate} />
+        <Sidebar setMapCenter = {locate} parks={parks}/>
         <MapContainer mapCenter = {mapCenter} parks = {parks}/>
         {/* <div><MapContainer/></div> */}
       </div>
