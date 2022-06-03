@@ -5,41 +5,74 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBCardImage,
-  MDBBtn,
 } from "mdb-react-ui-kit";
+import { Link } from "react-router-dom";
+import "../Sidebar/Sidebar.css";
 
-export default function Card({ park }) {
+export default function Card({ setMapCenter, park }) {
   return (
-    <MDBCard style={{ height: "100%", margin: ".5rem", minWidth: "20vw" }}>
-      <div style={{ height: "10rem", textAlign: "center" }}>
+    <MDBCard
+      style={{
+        height: "90%",
+        margin: ".25rem",
+        display: "flex",
+        flexDirection: "row",
+        width: "144%",
+      }}
+      className="card"
+    >
+      <div
+        style={{
+          height: "100%",
+          minWidth: "125px",
+          maxWidth: "125px",
+          textAlign: "center",
+        }}
+      >
         <MDBCardImage
-          style={{ height: "10rem" }}
+          style={{
+            height: "100%",
+            width: "100%",
+            objectFit: "cover",
+            borderRadius: "0",
+          }}
           src={park.images[0].url}
           fluid
           alt={park.name}
         />
       </div>
 
-      {/* <a>
-        <div
-          className="mask overlay"
-          style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-        ></div>
-      </a> */}
-      <MDBCardBody>
-        <MDBCardTitle>{park.fullName}</MDBCardTitle>
+      <MDBCardBody
+        style={{ textAlign: "right", paddingRight: "6px" }}
+        className="card-body"
+      >
+        <MDBCardTitle className="mb-0">{park.fullName}</MDBCardTitle>
         <MDBCardText>
           <div>
             {park.addresses[0].city}, {park.addresses[0].stateCode}
           </div>
         </MDBCardText>
-        <div>
-          <MDBBtn
-            style={{ position: "absolute", right: "0", bottom: "0" }}
-            href="#"
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <button
+            onClick={() =>
+              setMapCenter({
+                lat: Number(park.latitude),
+                lng: Number(park.longitude),
+              })
+            }
+            style={{ backgroundColor: "#bc6c25", color: "white" }}
+            className="btn btn-sm "
           >
-            View
-          </MDBBtn>
+            Locate
+          </button>
+          <Link to={`/${park._id}/view`} target="_blank" state={park}>
+            <button
+              className="btn btn-sm"
+              style={{ backgroundColor: "#606c38", color: "white" }}
+            >
+              Visit
+            </button>
+          </Link>
         </div>
       </MDBCardBody>
     </MDBCard>

@@ -1,0 +1,21 @@
+/* .footer{
+    position:relative;
+    bottom:0;
+    left:0;
+    
+    border-style: solid;
+   
+}  */
+
+.footer {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.footer a {
+  color: #dda15e;
+}
+
+a:hover {
+  color: lavender;
+}
