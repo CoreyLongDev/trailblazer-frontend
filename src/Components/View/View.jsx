@@ -8,6 +8,7 @@ import {
   MDBCarouselItem,
   MDBCarouselElement,
 } from "mdb-react-ui-kit";
+import { ShowComments } from "../Feat-Comments/ShowComments";
 // import { MDBIcon } from 'mdb-react-ui-kit';
 function View() {
   const [park, setPark] = useState(null);
@@ -118,7 +119,7 @@ function View() {
           </div>
           <hr></hr>
           <div className="comments">
-            <FeatComments parkID={id} park={park} />
+            <ShowComments parkID={id} park={park} />
           </div>
         </>
       )}
