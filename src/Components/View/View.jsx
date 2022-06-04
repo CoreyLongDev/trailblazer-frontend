@@ -52,12 +52,14 @@ function View() {
             <br></br>
             <strong>Saturday:</strong>{" "}
             {park.operatingHours[0].standardHours.saturday}
-            <img
+            <div className="pictureContainer">
+              <img
               height="100%"
               width="100%"
               src={park.images[0].url}
               alt="..."
             ></img>
+            </div>
           </div>
 
           <div className="info">
@@ -94,17 +96,17 @@ function View() {
             <h1>Pictures</h1>
             <MDBCarousel showControls fade>
               <MDBCarouselInner>
-                <MDBCarouselItem className="active">
-                  <MDBCarouselElement src={park.images[1].url} alt="..." />
+                <MDBCarouselItem className="active pictureContainer">
+                  <MDBCarouselElement className="pictureC"  src={park.images[1].url} alt="..." />
                 </MDBCarouselItem>
                 {park.images[2] && (
-                  <MDBCarouselItem>
-                    <MDBCarouselElement src={park.images[2].url} alt="..." />
+                  <MDBCarouselItem className="pictureContainer">
+                    <MDBCarouselElement className="pictureC"  src={park.images[2].url} alt="..." />
                   </MDBCarouselItem>
                 )}
                 {park.images[3] && (
-                  <MDBCarouselItem>
-                    <MDBCarouselElement src={park.images[3].url} alt="..." />
+                  <MDBCarouselItem className="pictureContainer">
+                    <MDBCarouselElement className="pictureC" src={park.images[3].url} alt="..." />
                   </MDBCarouselItem>
                 )}
               </MDBCarouselInner>
