@@ -2,7 +2,7 @@ import React from "react";
 import "./Sidebar.css";
 import ParkList from "../ItemLists/ParkList";
 
-function Sidebar({setMapCenter}) {
+function Sidebar({setMapCenter, parks}) {
   return (
     <>
       <div className="sidebar">
