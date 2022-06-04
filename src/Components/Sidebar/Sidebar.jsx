@@ -13,7 +13,7 @@ function Sidebar({setMapCenter}) {
             width: "90%",
           }}
         />
-        <ParkList setMapCenter={setMapCenter} />
+        <ParkList setMapCenter={setMapCenter} parks={parks}/>
       </div>
     </>
   );
