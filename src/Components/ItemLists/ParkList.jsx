@@ -14,7 +14,7 @@ const ParkList = ({setMapCenter, parks}) => {
               md="8"
               className="col-example"
             >
-              <Card setMapCenter= {setMapCenter} parks={parks} />
+              <Card setMapCenter= {setMapCenter} park={parks} />
             </MDBCol>
           ))}
         </MDBRow>
