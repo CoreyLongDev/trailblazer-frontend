@@ -63,7 +63,7 @@ export const About = () => {
     ))}
    </MDBCardGroup>
 
-   {/* <ShowComments/> */}
+   <ShowComments/>
 
 
 
