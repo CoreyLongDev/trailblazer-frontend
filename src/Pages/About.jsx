@@ -7,27 +7,37 @@ export const About = () => {
     {
       name: "David Dobrose",
       img: "https://ca.slack-edge.com/T0351JZQ0-U02UWQ5RRUH-de29c25e9981-512",
-      about: "From humble upbringings, David has always been committed to exploring the great outdoors. He is a family man devoted to his fiance and dog."
+      about: "From humble upbringings, David has always been committed to exploring the great outdoors. He is a family man devoted to his fiance and dog.",
+      github: "https://github.com/ddobrose",
+      linkedIn: "https://www.linkedin.com/in/david-dobrose/"
     },
     {
       name: "Jacob Vernau",
       img: "https://ca.slack-edge.com/T0351JZQ0-U02UBESDV1U-5702b22d8680-512",
-      about: "your favorite camp counselor"
+      about: "Software Engineer | Javascript, React, HTML, CSS, NodeJS, EXPRESS, MongoDB, MONGOOSE | Problem-Solver",
+      github: "https://github.com/jacver",
+      linkedIn: "https://www.linkedin.com/in/jacobvernau/"
     },
     {
       name: "Myles Turner",
       img: "https://ca.slack-edge.com/T0351JZQ0-U02UJ58V97U-d47e4f122200-512",
-      about: "Here's some free tax advice from Myles, Dont pay it"
+      about: "Full-stack Software developer with experience in HTML | CSS | JavaScript | Node.JS | Express.JS | Mongo | Mongoose.",
+      github: "https://github.com/MJT30",
+      linkedIn: "https://www.linkedin.com/in/myles-turner-b7629297/"
     },
     {
       name: "Martin Wilson",
       img: "https://ca.slack-edge.com/T0351JZQ0-U02UBET4DC6-83823ebbabc2-512",
-      about: "Martin loves backends... i mean coding of course"
+      about: "A full stack software engineer with a love for finding solutions; my tools include React, MongoDB, and Javascript. I enjoy simplifying complex workflows with DevOps tools and building scalable products with the focus of community uplifting. As a conscientious team member willing to step into any role necessary I pride myself on my work ethic while enjoying life to its fullest.",
+      github: "https://github.com/TelleDelly",
+      linkedIn: "https://www.linkedin.com/in/martin-wilson-tel/"
     },
     {
       name: "Corey Long",
       img: "https://ca.slack-edge.com/T0351JZQ0-U02UBETFEGN-5ee0ce2895aa-512",
-      about: "If you find Corey on Halo, prepare for the easiest win of your life"
+      about: "Full-Stack Software Engineer",
+      github: "https://github.com/PatriotxZero",
+      linkedIn: "https://www.linkedin.com/in/coreylong90/"
     }
     
     
@@ -56,6 +66,9 @@ export const About = () => {
           </MDBCardText>
           <MDBCardText>
             <small className='text-muted'></small>
+            <a href={peep.linkedIn}>My LinkedIn</a>
+            <br></br>
+            <a href={peep.github}>My Github</a>
           </MDBCardText>
         </MDBCardBody>
       </MDBCard>
