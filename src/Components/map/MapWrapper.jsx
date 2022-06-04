@@ -85,7 +85,7 @@ const MapContainer = ({ mapCenter, locations, parks }) => {
   
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyCKM6KA7xJEgNXdTifGti9buECKKt0Zn2U">
+    <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
       <GoogleMap mapContainerStyle={mapStyles} zoom={13} center={center}>
         {latLongs.map((item) => {
           return (
