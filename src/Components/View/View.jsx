@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import "./view.css";
-import FeatComments from "../Feat-Comments/FeatComments";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import './view.css';
 import {
   MDBCarousel,
   MDBCarouselInner,
   MDBCarouselItem,
   MDBCarouselElement,
-} from "mdb-react-ui-kit";
-import { ShowComments } from "../Feat-Comments/ShowComments";
-// import { MDBIcon } from 'mdb-react-ui-kit';
+} from 'mdb-react-ui-kit';
+import { ShowComments } from '../Feat-Comments/ShowComments';
+
 function View() {
   const [park, setPark] = useState(null);
   let { id } = useParams();
-  // const key = "EL1Bl0NrfZIjxhIIUVPEsrnWNz5o0cWaaKhvyWa7"
   const url = `https://fathomless-eyrie-16229.herokuapp.com/parks/${id}`;
   useEffect(() => {
     fetch(url)
@@ -32,38 +30,38 @@ function View() {
             <h1>{park.fullName}</h1>
             {park.addresses[0].line1}
             <br></br>
-            {park.addresses[0].city} |{park.addresses[0].stateCode} |{" "}
+            {park.addresses[0].city} |{park.addresses[0].stateCode} |{' '}
             {park.addresses[0].postalCode}
             <h1>Hours: </h1>
-            <strong>Monday:</strong>{" "}
+            <strong>Monday:</strong>{' '}
             {park.operatingHours[0].standardHours.monday}
             <br></br>
-            <strong>Tuesday:</strong>{" "}
+            <strong>Tuesday:</strong>{' '}
             {park.operatingHours[0].standardHours.tuesday}
             <br></br>
-            <strong>Wednesday:</strong>{" "}
+            <strong>Wednesday:</strong>{' '}
             {park.operatingHours[0].standardHours.wednesday}
             <br></br>
-            <strong>Thursday:</strong>{" "}
+            <strong>Thursday:</strong>{' '}
             {park.operatingHours[0].standardHours.thursday}
             <br></br>
-            <strong>Friday: </strong>{" "}
+            <strong>Friday: </strong>{' '}
             {park.operatingHours[0].standardHours.friday}
             <br></br>
-            <strong>Saturday:</strong>{" "}
+            <strong>Saturday:</strong>{' '}
             {park.operatingHours[0].standardHours.saturday}
             <div className="pictureContainer">
               <img
-              height="100%"
-              width="100%"
-              src={park.images[0].url}
-              alt="..."
-            ></img>
+                height="100%"
+                width="100%"
+                src={park.images[0].url}
+                alt="..."
+              ></img>
             </div>
           </div>
 
           <div className="info">
-            {" "}
+            {' '}
             <span>
               <h1>{park.fullName} Facts</h1>
             </span>
@@ -79,7 +77,7 @@ function View() {
 
           <div className="parkfacts2">
             <strong>
-              <h1>Activities:</h1>{" "}
+              <h1>Activities:</h1>{' '}
             </strong>
             <br></br>
             <div>
@@ -97,16 +95,28 @@ function View() {
             <MDBCarousel showControls fade>
               <MDBCarouselInner>
                 <MDBCarouselItem className="active pictureContainer">
-                  <MDBCarouselElement className="pictureC"  src={park.images[1].url} alt="..." />
+                  <MDBCarouselElement
+                    className="pictureC"
+                    src={park.images[1].url}
+                    alt="..."
+                  />
                 </MDBCarouselItem>
                 {park.images[2] && (
                   <MDBCarouselItem className="pictureContainer">
-                    <MDBCarouselElement className="pictureC"  src={park.images[2].url} alt="..." />
+                    <MDBCarouselElement
+                      className="pictureC"
+                      src={park.images[2].url}
+                      alt="..."
+                    />
                   </MDBCarouselItem>
                 )}
                 {park.images[3] && (
                   <MDBCarouselItem className="pictureContainer">
-                    <MDBCarouselElement className="pictureC" src={park.images[3].url} alt="..." />
+                    <MDBCarouselElement
+                      className="pictureC"
+                      src={park.images[3].url}
+                      alt="..."
+                    />
                   </MDBCarouselItem>
                 )}
               </MDBCarouselInner>

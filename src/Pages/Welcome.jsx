@@ -11,7 +11,9 @@ import {
 const Welcome = () => {
   return (
     <>
+
       {/* START HERO BANNER */}
+      
       <div
         className="p-5 text-center bg-image"
         style={{
@@ -59,7 +61,9 @@ const Welcome = () => {
           justifyContent: "space-evenly",
         }}
       >
+
         {/* CARD 1 */}
+
         <MDBCard background="dark" className="text-white w-25">
           <Link to={"/trails"} style={{ color: "white" }}>
             <MDBCardImage
@@ -72,8 +76,8 @@ const Welcome = () => {
             </MDBCardOverlay>
           </Link>
         </MDBCard>
-        {/* END CARD 1 */}
 
+        {/* END CARD 1 */}
         {/* CARD 2 */}
 
         <MDBCard background="dark" className="text-white w-25">
@@ -91,8 +95,8 @@ const Welcome = () => {
         </MDBCard>
 
         {/* END CARD 2 */}
-
         {/* CARD 3 */}
+
         <MDBCard background="dark" className="text-white w-25">
           <Link to={"/hotsprings"} style={{ color: "white" }}>
             <MDBCardImage
@@ -106,6 +110,7 @@ const Welcome = () => {
             </MDBCardOverlay>
           </Link>
         </MDBCard>
+    
         {/* END CARD 3 */}
       </MDBContainer>
     </>
