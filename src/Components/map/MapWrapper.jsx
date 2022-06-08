@@ -35,14 +35,14 @@
 
 // export default MapWrapper
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   GoogleMap,
   LoadScript,
   Marker,
   InfoWindow,
-} from "@react-google-maps/api";
-import PopupCards from "../PopupCards/PopupCards";
+} from '@react-google-maps/api';
+import PopupCards from '../PopupCards/PopupCards';
 
 const MapContainer = ({ mapCenter, locations, parks }) => {
   const [selected, setSelected] = useState({});
@@ -63,33 +63,30 @@ const MapContainer = ({ mapCenter, locations, parks }) => {
     };
   });
 
-  console.log(latLongs);
+  // console.log(latLongs);
 
   // console.log(latLongs)
   const mapStyles = {
-    height: "100vh",
-    width: "100%",
+    height: '100vh',
+    width: '100%',
   };
 
- 
- const defaultCenter = {
+  const defaultCenter = {
     lat: 44.409286,
     lng: -68.247501,
   };
 
-  var center = defaultCenter
+  var center = defaultCenter;
 
-  mapCenter ?  center = mapCenter 
- 
- : center = defaultCenter
-  
+  mapCenter ? (center = mapCenter) : (center = defaultCenter);
 
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
       <GoogleMap mapContainerStyle={mapStyles} zoom={13} center={center}>
-        {latLongs.map((item) => {
+        {latLongs.map((item, key) => {
           return (
             <Marker
+              key={key}
               position={item.location}
               onClick={() => onSelect(item)}
               // icon = 'https://cdn1.iconfinder.com/data/icons/map-objects/154/map-object-tree-park-forest-point-place-512.png'

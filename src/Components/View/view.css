@@ -1,5 +1,4 @@
 .fullName{
-    /* border-style: solid; */
     text-align: center;
     font-family: 'Arvo', serif;
     background-color: #fefae0;
@@ -20,7 +19,6 @@ h1{
 }
 
 .parkfacts{
-    /* border-style: solid; */
     border-radius: 8px;
     background-color: #fefae0;
     font-family: 'Arvo', serif;
@@ -45,8 +43,6 @@ span{
 
 .parkfacts2{
     border-style: solid #bc6c25;
-    /* size: 24px;
-    width: 15%; */
     text-align: center;
     background-color: #fefae0;
     border-radius: 8px;
@@ -57,7 +53,6 @@ span{
 
 .text{
     border-style: solid;
-    /* margin-top: 100px; */
     font-family: 'Arvo', serif;
     background-color: #fefae0;
     border-radius: 8px;
@@ -81,8 +76,6 @@ button:hover {
 
   .pictures{
     border-radius: 8px;
-    /* width: 100%; */
-    /* height: auto;  */
     
   }
 
@@ -101,14 +94,10 @@ button:hover {
   .picture2{
     border-radius: 8px;
     float: right;
-    /* width: 100%;
-    height: auto; */
-    
   }
 
 
   .box{
-      /* border-style: solid; */
       font-family: 'Arvo', serif;
       border-radius: 8px;
       background-color: #fefae0;
