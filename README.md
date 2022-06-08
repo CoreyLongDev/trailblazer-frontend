@@ -9,7 +9,7 @@
     A full-stack MERN application built to retrieve and display information on National Parks and hiking trails.
     <br />
     <br />
-    <a href="/">/////ADD LIVE HOST LINK///</a>
+    <a href="https://629bc57161a2a53c62bd8e73--taupe-dodol-1145d5.netlify.app/">Live App (Netlify)</a>
     ·
     <a href="https://github.com/PatriotxZero/trailblazer-frontend/issues">Report Bug (Client Side)</a>
      ·
@@ -35,7 +35,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#wireframe">Wireframe</a></li>
     <li><a href="#colors">Color Palette</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -95,14 +94,6 @@ To install and set up a local version of this project:
    npm install mdb-react-ui-kit dotenv express  method-override mongodb mongoose node nodemon react-router-dom @react-google-maps/api
    ```
    <p align="center">If mdb-react-ui-kit is giving you errors in browser try <code>mdb-react-ui-kit --force</code></p>
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- WIREFRAME -->
-
-## Wireframe
-
-<p>///////// ADD WIREFRAME IMAGE ////////</p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
