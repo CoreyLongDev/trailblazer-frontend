@@ -10,7 +10,7 @@ import {
 
 const Welcome = () => {
   return (
-    <>
+    <div style={{ height: '80vh' }}>
       {/* START HERO BANNER */}
 
       <div
@@ -62,12 +62,17 @@ const Welcome = () => {
       >
         {/* CARD 1 */}
 
-        <MDBCard background="dark" className="text-white w-25">
+        <MDBCard
+          background="dark"
+          className="text-white w-25"
+          style={{ height: '175px' }}
+        >
           <Link to={'/trails'} style={{ color: 'white' }}>
             <MDBCardImage
               overlay
               src="https://cdn.pixabay.com/photo/2016/11/22/19/25/man-1850181_960_720.jpg"
               alt="trails"
+              style={{ height: '175px' }}
             />
             <MDBCardOverlay>
               <MDBCardTitle style={{ fontSize: '2rem' }}>Hike</MDBCardTitle>
@@ -78,12 +83,17 @@ const Welcome = () => {
         {/* END CARD 1 */}
         {/* CARD 2 */}
 
-        <MDBCard background="dark" className="text-white w-25">
-          <Link to={'/parks'} style={{ color: 'white' }}>
+        <MDBCard
+          background="dark"
+          className="text-white w-25"
+          style={{ height: '175px' }}
+        >
+          <Link to={'/parks'} style={{ color: 'white', height: '175px' }}>
             <MDBCardImage
               overlay
               src="https://cdn.pixabay.com/photo/2016/08/12/20/14/river-1589616_960_720.jpg"
               alt="national parks"
+              style={{ height: '175px' }}
             />
             <MDBCardOverlay>
               <MDBCardTitle style={{ fontSize: '2rem' }}>See</MDBCardTitle>
@@ -94,13 +104,18 @@ const Welcome = () => {
         {/* END CARD 2 */}
         {/* CARD 3 */}
 
-        <MDBCard background="dark" className="text-white w-25">
-          <Link to={'/hotsprings'} style={{ color: 'white' }}>
+        <MDBCard
+          background="dark"
+          className="text-white w-25"
+          style={{ height: '175px' }}
+        >
+          <Link to={'/hotsprings'} style={{ color: 'white', height: '175px' }}>
             <MDBCardImage
               overlay
               src="https://cdn.pixabay.com/photo/2016/11/21/17/39/hot-spring-1846721_960_720.jpg"
               alt="hot springs"
               className="h-100"
+              style={{ height: '175px' }}
             />
             <MDBCardOverlay>
               <MDBCardTitle style={{ fontSize: '2rem' }}>Soak</MDBCardTitle>
@@ -110,7 +125,7 @@ const Welcome = () => {
 
         {/* END CARD 3 */}
       </MDBContainer>
-    </>
+    </div>
   );
 };
 
