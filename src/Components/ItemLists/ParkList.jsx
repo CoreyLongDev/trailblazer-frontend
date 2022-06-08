@@ -1,20 +1,20 @@
-import React from "react";
-import Card from "../Content/Card";
-import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
+import React from 'react';
+import Card from '../Content/Card';
+import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 
-const ParkList = ({setMapCenter, parks}) => {
-
+const ParkList = ({ setMapCenter, parks }) => {
   return (
     <>
       <MDBContainer>
         <MDBRow className="mb-3">
-          {parks.map((park) => (
+          {parks.map((park, key) => (
             <MDBCol
-              style={{ padding: "0", marginBottom: ".5rem" }}
+              style={{ padding: '0', marginBottom: '.5rem' }}
               md="8"
               className="col-example"
+              key={key}
             >
-              <Card setMapCenter= {setMapCenter} park={park} />
+              <Card setMapCenter={setMapCenter} park={park} />
             </MDBCol>
           ))}
         </MDBRow>

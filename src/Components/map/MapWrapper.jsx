@@ -83,9 +83,10 @@ const MapContainer = ({ mapCenter, locations, parks }) => {
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
       <GoogleMap mapContainerStyle={mapStyles} zoom={13} center={center}>
-        {latLongs.map((item) => {
+        {latLongs.map((item, key) => {
           return (
             <Marker
+              key={key}
               position={item.location}
               onClick={() => onSelect(item)}
               // icon = 'https://cdn1.iconfinder.com/data/icons/map-objects/154/map-object-tree-park-forest-point-place-512.png'
