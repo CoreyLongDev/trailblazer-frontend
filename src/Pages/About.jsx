@@ -38,7 +38,7 @@ export const About = () => {
       name: 'Martin Wilson',
       img: 'https://ca.slack-edge.com/T0351JZQ0-U02UBET4DC6-83823ebbabc2-512',
       about:
-        'A full stack software engineer with a love for finding solutions; my tools include React, MongoDB, and Javascript. I enjoy simplifying complex workflows with DevOps tools and building scalable products with the focus of community uplifting. As a conscientious team member willing to step into any role necessary I pride myself on my work ethic while enjoying life to its fullest.',
+        'A full stack software engineer with a love for finding solutions; my tools include React, MongoDB, Javascript, and Django. I enjoy simplifying complex workflows with DevOps tools and building scalable products with the focus of community uplifting. As a conscientious team member willing to step into any role necessary I pride myself on my work ethic while enjoying life to its fullest.',
       github: 'https://github.com/TelleDelly',
       linkedIn: 'https://www.linkedin.com/in/martin-wilson-tel/',
     },
