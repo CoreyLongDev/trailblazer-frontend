@@ -1,7 +1,10 @@
-
 .footer {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-align: center;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
 }
 
 .footer a {
@@ -9,5 +12,6 @@
 }
 
 a:hover {
-  color: lavender;
+  color: white;
+  text-decoration: underline;
 }

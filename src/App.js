@@ -18,28 +18,30 @@ function App() {
         <NavBar />
       </header>
 
-      <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route
-          path="/parks"
-          element={
-            <>
-              <Parks />
-            </>
-          }
-        />
-        <Route
-          path="/trails"
-          element={
-            <>
-              <Trails />
-            </>
-          }
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="/map" element={<MapContainer />} />
-        <Route path="/:id/view" element={<View />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Welcome />} />
+          <Route
+            path="/parks"
+            element={
+              <>
+                <Parks />
+              </>
+            }
+          />
+          <Route
+            path="/trails"
+            element={
+              <>
+                <Trails />
+              </>
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/map" element={<MapContainer />} />
+          <Route path="/:id/view" element={<View />} />
+        </Routes>
+      </main>
 
       <footer>
         <Footer />
