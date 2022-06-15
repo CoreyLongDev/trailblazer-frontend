@@ -81,14 +81,6 @@ input:focus {
   align-items: center;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  background-color: lightgray;
-}
-
 .clearBtn {
   cursor: pointer;
 }

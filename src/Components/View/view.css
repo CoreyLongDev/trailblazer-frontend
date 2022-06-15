@@ -1,118 +1,103 @@
-.fullName{
-    text-align: center;
-    font-family: 'Arvo', serif;
-    background-color: #fefae0;
-    color: #bc6c25;
-
+.fullName {
+  text-align: center;
+  font-family: 'Arvo', serif;
+  background-color: #fefae0;
+  color: #bc6c25;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 20%,20%,20%;
-    grid-template-rows: 20%;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 20%, 20%, 20%;
+  grid-template-rows: 20%;
+  align-items: center;
 }
 
-
-h1{
-    color: #606c38;
+h1 {
+  color: #606c38;
 }
 
-.parkfacts{
-    border-radius: 8px;
-    background-color: #fefae0;
-    font-family: 'Arvo', serif;
-    text-align: center;
-    color: #bc6c25;
+.parkfacts {
+  border-radius: 8px;
+  background-color: #fefae0;
+  font-family: 'Arvo', serif;
+  text-align: center;
+  color: #bc6c25;
 }
 
-.hours{
-    padding-left: 900px;
-    font-size: 11px;
-    font-family: 'Arvo', serif;
-    
-    
+.hours {
+  padding-left: 900px;
+  font-size: 11px;
+  font-family: 'Arvo', serif;
 }
 
-span{
-    text-align: center;
-    font-family: 'Arvo', serif;
-    color: #bc6c25;
-
+span {
+  text-align: center;
+  font-family: 'Arvo', serif;
+  color: #bc6c25;
 }
 
-.parkfacts2{
-    border-style: solid #bc6c25;
-    text-align: center;
-    background-color: #fefae0;
-    border-radius: 8px;
-    font-family: 'Arvo', serif;
-    color: #bc6c25;
-    
+.parkfacts2 {
+  border-style: solid #bc6c25;
+  text-align: center;
+  background-color: #fefae0;
+  border-radius: 8px;
+  font-family: 'Arvo', serif;
+  color: #bc6c25;
 }
 
-.text{
-    border-style: solid;
-    font-family: 'Arvo', serif;
-    background-color: #fefae0;
-    border-radius: 8px;
-    color: #bc6c25;
-    
+.text {
+  border-style: solid;
+  font-family: 'Arvo', serif;
+  background-color: #fefae0;
+  border-radius: 8px;
+  color: #bc6c25;
 }
-
-
 
 button {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color: #bc6c25;
-    font-family: 'Arvo', serif;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #bc6c25;
+  font-family: 'Arvo', serif;
 }
 
 button:hover {
-    background-color: #606c38; 
-    color: white;
-    font-family: 'Arvo', serif;
-  }
-
-  .pictures{
-    border-radius: 8px;
-    
-  }
-
-  .picturesC {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  .pictureContainer {
-      width: 80vw;
-      height: 600px;
-      display: flex;
-      align-items: center;
-  }
-
-  .picture2{
-    border-radius: 8px;
-    float: right;
-  }
-
-
-  .box{
-      font-family: 'Arvo', serif;
-      border-radius: 8px;
-      background-color: #fefae0;
-      color: #bc6c25;
-      
-      
-  }
-
-  img{
-      border-radius: 8px;
-  }
-
-.info{
-    background-color: #fefae0;
-    border-radius: 8px;
+  background-color: #606c38;
+  color: white;
+  font-family: 'Arvo', serif;
 }
- 
- 
+
+.pictures {
+  border-radius: 8px;
+}
+
+.picturesC {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.pictureContainer {
+  width: 80vw;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.picture2 {
+  border-radius: 8px;
+  float: right;
+}
+
+.box {
+  font-family: 'Arvo', serif;
+  border-radius: 8px;
+  background-color: #fefae0;
+  color: #bc6c25;
+}
+
+img {
+  border-radius: 8px;
+}
+
+.info {
+  background-color: #fefae0;
+  border-radius: 8px;
+}
