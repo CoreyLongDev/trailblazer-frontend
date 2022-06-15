@@ -16,7 +16,7 @@ export const Footer = () => {
         </a>{' '}
         | <a href="https://www.nps.gov/subjects/developer/index.htm">Api </a>|
         Contact us:{' '}
-        <a href="https://www.linkedin.com/in/coreylong90/">Cory Long </a> |{' '}
+        <a href="https://www.linkedin.com/in/coreylong90/">Corey Long </a> |{' '}
         <a href="https://www.linkedin.com/in/david-dobrose/">David Dobrose </a>{' '}
         | <a href="https://www.linkedin.com/in/jacobvernau/">Jacob Vernau </a> |{' '}
         <a href="https://www.linkedin.com/in/martin-wilson-tel/">
