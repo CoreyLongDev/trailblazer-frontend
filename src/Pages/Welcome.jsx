@@ -6,6 +6,8 @@ import {
   MDBCardTitle,
   MDBContainer,
   MDBCardImage,
+  MDBRow,
+  MDBCol,
 } from 'mdb-react-ui-kit';
 
 const Welcome = () => {
@@ -54,76 +56,85 @@ const Welcome = () => {
       {/* START NPI CARDS */}
 
       <MDBContainer
-        className="d-flex flex-md-row  mb-3  "
+        className="d-flex flex-lg-row flex-md-row justify-content-evenly"
         style={{
           marginTop: '.5rem',
           justifyContent: 'space-evenly',
         }}
       >
-        {/* CARD 1 */}
+        <MDBRow className="d-flex flex-md-row  flex-lg-row justify-content-around w-100">
+          <MDBCol className="d-flex flex-column flex-md-row flex-lg-row justify-content-around w-100">
+            {/* CARD 1 */}
 
-        <MDBCard
-          background="dark"
-          className="text-white w-25"
-          style={{ height: '175px' }}
-        >
-          <Link to={'/trails'} style={{ color: 'white' }}>
-            <MDBCardImage
-              overlay
-              src="https://cdn.pixabay.com/photo/2016/11/22/19/25/man-1850181_960_720.jpg"
-              alt="trails"
+            <MDBCard
+              background="dark"
+              className="text-white vw-25 mb-2"
               style={{ height: '175px' }}
-            />
-            <MDBCardOverlay>
-              <MDBCardTitle style={{ fontSize: '2rem' }}>Hike</MDBCardTitle>
-            </MDBCardOverlay>
-          </Link>
-        </MDBCard>
+            >
+              <Link to={'/trails'} style={{ color: 'white' }}>
+                <MDBCardImage
+                  overlay
+                  src="https://cdn.pixabay.com/photo/2016/11/22/19/25/man-1850181_960_720.jpg"
+                  alt="trails"
+                  className="vw-25"
+                  style={{ height: '175px' }}
+                />
+                <MDBCardOverlay>
+                  <MDBCardTitle style={{ fontSize: '2rem' }}>Hike</MDBCardTitle>
+                </MDBCardOverlay>
+              </Link>
+            </MDBCard>
 
-        {/* END CARD 1 */}
-        {/* CARD 2 */}
+            {/* END CARD 1 */}
+            {/* CARD 2 */}
 
-        <MDBCard
-          background="dark"
-          className="text-white w-25"
-          style={{ height: '175px' }}
-        >
-          <Link to={'/parks'} style={{ color: 'white', height: '175px' }}>
-            <MDBCardImage
-              overlay
-              src="https://cdn.pixabay.com/photo/2016/08/12/20/14/river-1589616_960_720.jpg"
-              alt="national parks"
+            <MDBCard
+              background="dark"
+              className="text-white  mb-2"
               style={{ height: '175px' }}
-            />
-            <MDBCardOverlay>
-              <MDBCardTitle style={{ fontSize: '2rem' }}>See</MDBCardTitle>
-            </MDBCardOverlay>
-          </Link>
-        </MDBCard>
+            >
+              <Link to={'/parks'} style={{ color: 'white', height: '175px' }}>
+                <MDBCardImage
+                  overlay
+                  src="https://cdn.pixabay.com/photo/2016/08/12/20/14/river-1589616_960_720.jpg"
+                  alt="national parks"
+                  className="vw-25"
+                  style={{ height: '175px' }}
+                />
+                <MDBCardOverlay>
+                  <MDBCardTitle style={{ fontSize: '2rem' }}>See</MDBCardTitle>
+                </MDBCardOverlay>
+              </Link>
+            </MDBCard>
 
-        {/* END CARD 2 */}
-        {/* CARD 3 */}
+            {/* END CARD 2 */}
+            {/* CARD 3 */}
 
-        <MDBCard
-          background="dark"
-          className="text-white w-25"
-          style={{ height: '175px' }}
-        >
-          <Link to={'/hotsprings'} style={{ color: 'white', height: '175px' }}>
-            <MDBCardImage
-              overlay
-              src="https://cdn.pixabay.com/photo/2016/11/21/17/39/hot-spring-1846721_960_720.jpg"
-              alt="hot springs"
-              className="h-100"
+            <MDBCard
+              background="dark"
+              className="text-white vw-25"
               style={{ height: '175px' }}
-            />
-            <MDBCardOverlay>
-              <MDBCardTitle style={{ fontSize: '2rem' }}>Soak</MDBCardTitle>
-            </MDBCardOverlay>
-          </Link>
-        </MDBCard>
+            >
+              <Link
+                to={'/hotsprings'}
+                style={{ color: 'white', height: '175px' }}
+              >
+                <MDBCardImage
+                  overlay
+                  src="https://cdn.pixabay.com/photo/2016/11/21/17/39/hot-spring-1846721_960_720.jpg"
+                  alt="hot springs"
+                  className="h-100 vw-25"
+                  style={{ height: '175px' }}
+                />
+                <MDBCardOverlay>
+                  <MDBCardTitle style={{ fontSize: '2rem' }}>Soak</MDBCardTitle>
+                </MDBCardOverlay>
+              </Link>
+            </MDBCard>
 
-        {/* END CARD 3 */}
+            {/* END CARD 3 */}
+          </MDBCol>
+        </MDBRow>
       </MDBContainer>
     </div>
   );
